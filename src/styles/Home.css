@@ -7,3 +7,30 @@
   margin: 20px auto;
   max-width: 300px;
 }
+
+.pillars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 max(50px, 7vw);
+}
+
+.pillar {
+  border: 1px solid #175A83;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-overflow: wrap;
+  max-width: max(200px, 20vw);
+  box-shadow: -4px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
