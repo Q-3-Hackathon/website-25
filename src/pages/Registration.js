@@ -1,4 +1,4 @@
-import Q3Logo from './Q3LOGO_notext.png'
+import Q3Logo from '../assets/images/Q3LOGO_notext.png'
 function Registration() {
   return (
     <div>
