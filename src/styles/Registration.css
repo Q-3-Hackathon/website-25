@@ -1,0 +1,167 @@
+.blob-effect h1{
+    font-size: 2.5rem;
+  }
+  
+  .blob-effect{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+    display: grid;
+    align-items: center;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .blob-effect span {
+    z-index: -1; /* Put behind the h1 */
+  }
+  
+  .blob-effect span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2079af;
+    border-radius: 30% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: rotate-blob 5s linear infinite;
+  }
+  
+  .blob-effect:hover span:nth-child(2){
+    background: #2584b2;
+    border: none;
+  }
+  
+  .blob-effect span:nth-child(3){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2079af;
+    border-radius: 30% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: rotate-blob 4s linear infinite;
+  }
+  
+  .blob-effect:hover span:nth-child(3){
+    background: #6abde9;
+    border: none;
+  }
+  
+  .blob-effect span:nth-child(4){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2079af;
+    border-radius: 30% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: rotate-blob 10s linear infinite;
+  }
+  
+  .blob-effect:hover span:nth-child(4){
+    background: #aadbec;
+    border: none;
+  }
+  
+  @keyframes rotate-blob {
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  .reg-btn {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px; 
+    padding-top: 100px;
+    align-items: flex-start;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .btn-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #vol-btn, #explore-btn {
+    width: 300px;
+    height: 50px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #2079AF;
+    margin-bottom: 20px;
+  }
+  
+  #vol-btn:hover, #explore-btn:hover {
+    opacity: 0.5;
+  }
+  
+  .vol-sym-btn, .exp-sym-btn {
+    text-decoration: none;
+    border: none;
+    background: none;
+    width: 0px;
+    margin-left: -30px;;
+    position: relative;
+    margin-bottom: 250px;
+  }
+  
+  .vol-sym-btn img, .exp-sym-btn img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease;
+  }
+  
+  .vol-sym-btn:hover img,
+  .exp-sym-btn:hover img {
+    transform: scale(1.1);
+  }
+  
+  .popup-box {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 120%; /* position below icon */
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    background-color: #c7e9ff;
+    padding: 16px 24px;
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    z-index: 10;
+    margin-left: 12px;;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    color: #2079AF;
+  }
+  
+  .exp-sym-btn:hover .popup-box {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+  }
+  
+  .vol-sym-btn:hover .popup-box {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+  }
