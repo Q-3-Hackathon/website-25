@@ -53,7 +53,7 @@ function Home() {
       <h2>About Q<sup>3</sup></h2>
       <p>A joint Center for Quantum Networks and United Nations International Telecommunications Union quantum initiative dedicated to three pillars: 
         art, ethics, and engineering. With two host institutions, the University of Maryland and the University of California, this quantum initiative 
-        will span from coast to coast. The Q^3 Initiative has two core goals: (1) to foster collaboration between artists and scientists to make 
+        will span from coast to coast. The Q<sup>3</sup> Initiative has two core goals: (1) to foster collaboration between artists and scientists to make 
         quantum science more accessible to the general public and (2) to train the general public on the fundamentals of quantum computing while 
         emphasizing responsible innovation.</p>
       <h2>The Pillars</h2>

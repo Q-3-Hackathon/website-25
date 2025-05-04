@@ -2,9 +2,9 @@
 function QEE() {
     return (
       <div>
-        <h1>Quantum Engineering Ethics Events to Support the Q^3 Effort</h1>
+        <h1>Quantum Engineering Ethics Events to Support the Q<sup>3</sup> Effort</h1>
         <p>Quantum Engineering Ethics (QEE) is a student organization founded and led by Sandra Al Hames in December of 2024 at USC. The purpose of these events is to prepare students for the Hackathon and act as an Introduction to Quantum Computing.</p>
-        <h2>Q^3 Launch Session - 2/27/2025 at 1:30pm</h2>
+        <h2>Q<sup>3</sup> Launch Session - 2/27/2025 at 1:30pm</h2>
         <p>RTH211</p>
         <p>All pre-registered students will be invited to participate in an information session on Q^3 and the aim of the initiative. Graduate students from USC, alongside QEE leadership will assist students with installing Jupyter Notebook and Qiskit. 
             Pre-release a list of resources compiled by QEE to help students learn quantum asynchronously 
