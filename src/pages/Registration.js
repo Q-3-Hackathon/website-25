@@ -1,4 +1,4 @@
-import infoSym from './regInfoSymbol.png'
+import infoSym from '../assets/images/regInfoSymbol.png'
 
 function Registration() {
   return (
