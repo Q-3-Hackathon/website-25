@@ -39,7 +39,7 @@ function Navbar() {
               <Route path="/" element={<Home />} />
               <Route path="/qreate" element={<Qreate />} />
               <Route path="/qethics" element={<Qethics />} />
-              <Route path="/Resources" element={<Resources />} />
+              <Route path="/resources" element={<Resources />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/faq" element={<Faq />} />
