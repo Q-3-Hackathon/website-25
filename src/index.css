@@ -17,5 +17,22 @@ body {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3.5rem;
-  color: #2079AF
+  color: #2079AF;
+  text-align: center;
 }
+
+.logo-img {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
