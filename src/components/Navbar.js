@@ -14,21 +14,25 @@ function Navbar() {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  };
+
   return (
       <Router>
           <div className='Navbar'>
-            <Link to="/" style={{ textDecoration: 'none'}}>Home</Link>
+            <Link to="/" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Home</Link>
             <div className = 'dropdown'>
               <span onClick={toggleDropdown}>About ▾</span>
               <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              <Link to="/qreate" style={{ textDecoration: 'none'}}>Qreate</Link>
-              <Link to="/qethics" style={{ textDecoration: 'none'}}>Qethics</Link>
-              <Link to="/schedule" style={{ textDecoration: 'none'}}>Schedule</Link>
+              <Link to="/qreate" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qreate</Link>
+              <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qethics</Link>
+              <Link to="/schedule" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Schedule</Link>
               </div>
             </div>
-            <Link to="/registration" style={{ textDecoration: 'none'}}>Registration</Link>
-            <Link to="/resources" style={{ textDecoration: 'none'}}>Resources</Link>
-            <Link to="/faq" style={{ textDecoration: 'none'}}>FAQ</Link>
+            <Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link>
+            <Link to="/resources" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Resources</Link>
+            <Link to="/faq" onClick={closeDropdown} style={{ textDecoration: 'none'}}>FAQ</Link>
           </div>
           <div className = 'content'> 
           <Routes>
