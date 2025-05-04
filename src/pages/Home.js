@@ -51,16 +51,20 @@ function Home() {
       <h1>Q<sup>3</sup> Initiative</h1>
       <p>September 12 - 14, 2025</p>
       <h2>About Q<sup>3</sup></h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>A joint Center for Quantum Networks and United Nations International Telecommunications Union quantum initiative dedicated to three pillars: 
+        art, ethics, and engineering. With two host institutions, the University of Maryland and the University of California, this quantum initiative 
+        will span from coast to coast. The Q^3 Initiative has two core goals: (1) to foster collaboration between artists and scientists to make 
+        quantum science more accessible to the general public and (2) to train the general public on the fundamentals of quantum computing while 
+        emphasizing responsible innovation.</p>
       <h2>The Pillars</h2>
       <div className="pillars">
         <div className = "pillar">
           <p>UMD</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>A non-traditional, creative-style hackathon with art exhibitions, creative workshops, and non-technical challenges open for 4 weeks. </p>
         </div>
         <div className = "pillar">
           <p>USC</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>A traditional, 24-hour technical quantum hackathon with an introduction to responsible quantum engineering and real world applications.</p>
         </div>
         <div className = 'sponsors'>
           <h1>
