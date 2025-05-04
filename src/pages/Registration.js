@@ -1,8 +1,9 @@
+import Q3Logo from './Q3LOGO_notext.png'
 function Registration() {
   return (
     <div>
       <h1>Registration</h1>
-      <p>Registration page content goes here.</p>
+      <img src={Q3Logo} class = "logo-img" alt="Q3 Logo no text"></img>
     </div>
   );
 }
