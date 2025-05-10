@@ -7,6 +7,7 @@ import Resources from '../pages/Resources';
 import Schedule from '../pages/Schedule';
 import Registration from '../pages/Registration';
 import Home from '../pages/Home';
+import QEE from '../pages/QEE';
 import '../styles/Navbar.css';
 
 function Navbar() {
@@ -43,6 +44,7 @@ function Navbar() {
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/faq" element={<Faq />} />
+              <Route path="/QEE" element={<QEE/>}/>
           </Routes>
           </div>
       </Router>
