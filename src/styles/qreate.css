@@ -1,0 +1,309 @@
+
+.intro-section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  .intro-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .left {
+    flex: 1 1 300px;
+    max-width: 600px;
+  }
+  
+  .title {
+    display: inline-block;               
+    margin: 0.5rem 0;                   
+    text-align: left;                  
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    background-image: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
+    background-clip: text;               
+    -webkit-background-clip: text;       
+    color: transparent;                 
+    -webkit-text-fill-color: transparent; 
+  }
+  
+  .paragraph {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .right {
+    flex: 0 0 300px;
+    text-align: center;        
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .logo {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+  .date-box {
+    display: block;          
+    margin: 2rem auto 0;     
+    background-color: rgba(199, 234, 255, 0.5);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    max-width: 800px;
+    box-shadow:2px 4px 2px rgba(0, 0, 0, 0.3) ;
+  }
+
+  .umd-section {
+    position: relative;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);  
+    background-color: #2079AF80;  
+    overflow: hidden;
+    padding: 1rem 1rem;
+    color: white;
+  }
+  
+  .umd-overlay {
+    position: flex;
+    inset: 0;
+    background-color: #2079AF80; 
+  }
+  
+  .umd-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .intro-section.umd-content {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;   
+    z-index: 2;
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .umd-heading {
+    color: white;          
+    background: none;       
+    font-size: 2.0rem;     
+    margin-bottom: 1rem;
+    text-align: left;
+    text-shadow: 2px 2px 4px #C7EAFF80;
+  }
+  
+  .speakers-section {
+    position: relative;
+    padding: 4rem 1rem 2rem;            
+    background-color: white;
+  }
+  
+  .speakers-section .speakers-header-box {
+    position: absolute;
+    top: 0;                              
+    left: 80%;                           
+    transform: translate(-50%, -50%);    
+    background-color: white;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  
+  .speakers-section .title {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+  
+  .speakers-section .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;                
+  }
+  
+  .speakers-section .card {
+    background-color: rgba(198, 227, 247, 0.7);
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 16rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .activities-section{
+    position: relative;
+    padding: 4rem 1rem 2rem;            
+    background-color: rgba(215, 215, 215, 0.28);
+    text-align: center;
+  }
+  
+  .schedule-container {
+    max-width: 1200px;
+    padding: 3.5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent
+  }
+  
+  .schedule-left{
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+
+  .schedule-right {
+    align-self: flex-start;
+    flex: 1;
+    text-align: center;
+    color: white;
+  }
+  
+  .schedule-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .schedule-time {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 80px;
+    background-color: white;
+    margin: 0 2rem;
+  }
+  
+  .schedule-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: white;
+    color: #2079AF;
+    border-radius: 2rem;
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .slider-container {
+    overflow: hidden;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  
+  .slider-slide ul {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slider-slide li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .slider-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .slider-arrow {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .dot-nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .dot.active {
+    background-color: #2079AF;
+    transform: scale(1.2);
+  }
+  
+
+  @media (max-width: 768px) {
+    .intro-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left, .right {
+      max-width: 100%;
+    }
+    .title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .paragraph {
+      text-align: center;
+    }
+  }
+  

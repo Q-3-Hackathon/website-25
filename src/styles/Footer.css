@@ -7,6 +7,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding: 10px 20px;
+    position: relative;
 }
 
 .footer-logo {
@@ -39,6 +40,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    position: relative;
 }
 
 .umd-logo {

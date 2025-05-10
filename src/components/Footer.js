@@ -5,6 +5,7 @@ import umdlogo from '../assets/images/umdlogo.png';
 
 function Footer() {
     return (
+        
         <div className='Footer'>
             <img src={logo} className="footer-logo" alt="Q^3 Logo" />
             <div className='footer-middle'>
