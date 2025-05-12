@@ -13,7 +13,7 @@ function Home() {
       left: '-50px',
       width: 'max(300px, 40vw)',
       height: 'max(350px, 65vh)',
-      zIndex: 0,
+      zIndex: -1,
     },
     trvec: {
       position: 'absolute',
@@ -21,7 +21,7 @@ function Home() {
       right: '-50px',
       width: 'max(300px, 40vw)',
       height: 'max(350px, 65vh)',
-      zIndex: 0,
+      zIndex: -1,
     },
     rvec: {
       position: 'absolute',
@@ -29,7 +29,7 @@ function Home() {
       right: 0,
       width: 'max(300px, 30vw)',
       height: 'min(640px, 120vh)',
-      zIndex: 0,
+      zIndex: -1,
     },
     lvec: {
       position: 'absolute',
@@ -37,7 +37,7 @@ function Home() {
       left: 0,
       width: 'max(300px, 30vw)',
       height: 'min(640px, 120vh)',
-      zIndex: 0,
+      zIndex: -1,
     },
     };
   return (
