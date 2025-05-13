@@ -9,6 +9,7 @@ import Registration from '../pages/Registration';
 import Home from '../pages/Home';
 import QEE from '../pages/QEE';
 import '../styles/Navbar.css';
+import SignUp from '../pages/auth/SignUp';
 
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -45,6 +46,7 @@ function Navbar() {
               <Route path="/registration" element={<Registration />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/QEE" element={<QEE/>}/>
+              <Route path="/signup" element={<SignUp />} />
           </Routes>
           </div>
       </Router>

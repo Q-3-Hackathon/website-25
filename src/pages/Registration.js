@@ -12,7 +12,7 @@ function Registration() {
       </div>
       <div className="reg-btn">
         <div className="btn-col">
-          <button id="vol-btn">Volunteer</button>
+          <a id="vol-btn" href="/signup?userType=volunteer">Volunteer</a>
           <button className="vol-sym-btn">
             <img src={infoSym} alt="Volunteer info symbol icon" />
             <div className="popup-box">
@@ -20,22 +20,18 @@ function Registration() {
               From managing logistics to supporting participants, your efforts help foster a smooth and welcoming experience for everyone involved!
             </div>
           </button>
-          
-          
+
+
         </div>
 
         <div className="btn-col">
-          <button id="explore-btn">Explorer</button>
+          <a id="explore-btn" href="/signup?userType=explorer">Explorer</a>
           <button className="exp-sym-btn">
             <img src={infoSym} alt="Explorer info symbol icon" />
             <div className="popup-box">
               As an explorer, you will explore the intricacies of Quantum in Art and Ethics.
             </div>
-          
           </button>
-          
-          
-          
         </div>
       </div>
     </div>
