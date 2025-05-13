@@ -8,6 +8,11 @@
   src: local("Poppins"), url("./assets/fonts/Poppins-SemiBold.ttf");
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -35,7 +40,9 @@ h1 {
 
 
 
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
