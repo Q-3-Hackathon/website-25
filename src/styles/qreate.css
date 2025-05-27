@@ -3,14 +3,14 @@ html, body {
     margin: 0;
     padding: 0;
   }
-  
+
 .intro-section {
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
     background-color: white;
   }
-  
+
   .intro-content {
     display: flex;
     align-items: flex-start;
@@ -18,12 +18,12 @@ html, body {
     gap: 2rem;
     flex-wrap: wrap;
   }
-  
+
   .left {
     flex: 1 1 300px;
     max-width: 600px;
   }
-  
+
   .title {
     display: inline-block;               
     margin: 0.5rem 0;                   
@@ -36,7 +36,7 @@ html, body {
     color: transparent;                 
     -webkit-text-fill-color: transparent; 
   }
-  
+
   .paragraph {
     margin-top: 1rem;
     font-size: 1rem;
@@ -44,7 +44,7 @@ html, body {
     color: #333;
     text-align: justify;
   }
-  
+
   .right {
     flex: 0 0 300px;
     text-align: center;        
@@ -52,13 +52,13 @@ html, body {
     justify-content: center; 
     align-items: center; 
   }
-  
+
   .logo {
     max-width: 100%;
     width: 100%;
     height: auto;
   }
-  
+
   .date-box {
     display: block;          
     margin: 2rem auto 0;     
@@ -82,13 +82,13 @@ html, body {
     padding: 1rem 1rem;
     color: white;
   }
-  
+
   .umd-overlay {
     position: flex;
     inset: 0;
     background-color: #2079AF80; 
   }
-  
+
   .umd-logo {
     position: absolute;
     top: 50%;
@@ -118,13 +118,14 @@ html, body {
     text-align: left;
     text-shadow: 2px 2px 4px #C7EAFF80;
   }
-  
+
   .speakers-section {
     position: relative;
     padding: 4rem 1rem 2rem;            
     background-color: white;
   }
-  
+
+
   .speakers-section .speakers-header-box {
     position: absolute;
     top: 0;                              
@@ -135,7 +136,7 @@ html, body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 2;
   }
-  
+
   .speakers-section .title {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -147,28 +148,66 @@ html, body {
     color: transparent;
     text-align: center;
   }
-  
+
   .speakers-section .cards-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2.5rem;                
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
   }
-  
-  .speakers-section .card {
-    background-color: rgba(198, 227, 247, 0.7);
+
+
+  .speaker-card {
+    background: #6abde9;
     border-radius: 0.5rem;
-    width: 12rem;
-    height: 16rem;
+    overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    height: 16rem;
+    box-sizing: border-box;
+    width: 12rem;
     cursor: pointer;
   }
-  
-  .card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+
+  .speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+  }
+
+  .speakerspic {
+    width: 130px;
+    height: 130px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid #74C7FF
+  }
+
+  .speaker-info {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    width: 100%;
+  }
+
+  .speaker-info h3 {
+    margin: 0.5rem 0 0.25rem;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .speaker-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
   }
 
   .activities-section{
@@ -177,7 +216,7 @@ html, body {
     background-color: rgba(215, 215, 215, 0.28);
     text-align: center;
   }
-  
+
   .schedule-container {
     max-width: 1200px;
     padding: 3.5rem;
@@ -187,7 +226,7 @@ html, body {
     justify-content: center;
     background-color: transparent
   }
-  
+
   .schedule-left{
     flex: 1;
     text-align: center;
@@ -200,33 +239,33 @@ html, body {
     text-align: center;
     color: white;
   }
-  
+
   .schedule-label {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
-  
+
   .schedule-time {
     font-size: 2rem;
     font-weight: bold;
   }
-  
+
   .divider {
     width: 1px;
     height: 80px;
     background-color: white;
     margin: 0 2rem;
   }
-  
+
   .schedule-title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
     margin-top: 0;
   }
-  
+
   .btn {
     display: inline-block;
     background-color: white;
@@ -244,28 +283,28 @@ html, body {
     max-width: 600px;
     margin: 1rem auto;
   }
-  
+
   .slider-content {
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
-  
+
   .slider-slide {
     min-width: 100%;
     box-sizing: border-box;
     padding: 1rem;
   }
-  
+
   .slider-slide ul {
     list-style: disc inside;
     margin: 0;
     padding: 0;
   }
-  
+
   .slider-slide li {
     margin-bottom: 0.5rem;
   }
-  
+
   .slider-navigation {
     display: flex;
     justify-content: center;
@@ -273,19 +312,19 @@ html, body {
     gap: 1rem;
     margin-top: 1rem;
   }
-  
+
   .slider-arrow {
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
   }
-  
+
   .dot-nav {
     display: flex;
     gap: 0.5rem;
   }
-  
+
   .dot {
     width: 12px;
     height: 12px;
@@ -295,12 +334,12 @@ html, body {
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
   }
-  
+
   .dot.active {
     background-color: #2079AF;
     transform: scale(1.2);
   }
-  
+
 
   @media (max-width: 768px) {
     .intro-content {
@@ -318,4 +357,3 @@ html, body {
       text-align: center;
     }
   }
-  

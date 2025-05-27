@@ -3,6 +3,10 @@ import { useState } from 'react';
 import umdlogo from '../assets/images/umdlogo.png';
 import logo from '../assets/images/Q3logotext.png';
 import '../styles/qreate.css';
+import oshiro from "../assets/images/speakers/oshiro.png";
+import yungerhalpern from "../assets/images/speakers/nicolehalpern.png";
+import danielserrano from "../assets/images/speakers/danielserrano.png";
+import benally from "../assets/images/speakers/benally.png";
 
 function Qreate() {
   const slides = [
@@ -77,9 +81,37 @@ function Qreate() {
       <div className="speakers-header-box">
         <h2 className="title">Our Speakers</h2>
       </div>
+
       <div className="cards-container">
-        <div className="card" />
-        <div className="card" />
+        <Link to="/speakers/scottoshiro" className="speaker-card">
+          <img src={oshiro} alt="Scott Oshiro" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Scott Oshiro</h3>
+          </div>
+        </Link>
+
+        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
+          <img src={yungerhalpern} alt="Nicole Yunger Halpern" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Nicole Yunger Halpern</h3>
+          </div>
+        </Link>
+
+        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
+          <img src={danielserrano} alt="Daniel Serrano" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Daniel Serrano</h3>
+          </div>
+        </Link>
+
+        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
+          <img src={benally} alt="Onri Benally" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Onri Benally</h3>
+          </div>
+        </Link>
+
+
         <div className="card" />
         <div className="card" />
         <div className="card" />
@@ -122,7 +154,7 @@ function Qreate() {
         <button onClick={next} className="slider-arrow">→</button>
       </div>
     </section>
-    
+
 
     <section className="intro-section" style={{ textAlign: 'center'}}>
       <h2 className="title">Challenges</h2>
