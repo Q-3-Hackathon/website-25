@@ -110,11 +110,6 @@ function Qreate() {
             <h3>Onri Benally</h3>
           </div>
         </Link>
-
-
-        <div className="card" />
-        <div className="card" />
-        <div className="card" />
       </div>
     </section>
 
@@ -156,14 +151,56 @@ function Qreate() {
     </section>
 
 
-    <section className="intro-section" style={{ textAlign: 'center'}}>
-      <h2 className="title">Challenges</h2>
-      <p className="paragraph">
-          Bring out your inner creativity and solve challenges that involve creating animations, music, games, and art to bring quantum to all. Challenges will be announced end of June!
-      </p>
-    </section>  
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', margin: '2rem 0' }}>
+      {/* Titles Row */}
+      <div style={{ display: 'flex', gap: '1.5rem' }}>
+        <div style={{ flex: '2', textAlign: 'center' }}>
+          <h2 className="title" style={{ fontSize: '2.5rem' }}>Challenges</h2>
+        </div>
+        <div style={{ flex: '1', textAlign: 'center' }}>
+          <h2 className="title" style={{ fontSize: '2rem' }}>Advanced</h2>
+        </div>
+      </div>
 
-    <section className="umd-section">
+      {/* Cards Row */}
+      <div style={{ display: 'flex', gap: '1.5rem' }}>
+        {/* Challenges Card 1 */}
+        <div style={{ flex: '2' }}>
+          <div className="advanced-card" style={{ height: '100%' }}>
+            <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
+              <li>Creating a visualization of how entanglement spreads</li>
+              <li>Creating a zeemax visualization of the classical interference in Young's N-slit</li>
+              <li>Demonstrating how lattice defects work</li>
+              <li>Simulate the graph state manipulations in this paper</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Challenges Card 2 */}
+        <div style={{ flex: '2' }}>
+          <div className="advanced-card" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <p style={{ color: '#2079AF', textAlign: 'center', padding: '1rem' }}>More challenges will be announced soon!</p>
+          </div>
+        </div>
+
+        {/* Advanced Card */}
+        <div style={{ flex: '1' }}>
+          <div className="advanced-card" style={{ height: '100%' }}>
+            <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
+              <li>"Walk through" the Raussendorf lattice</li>
+              <li>"See" the qubits decohere over time</li>
+              <li>Touch the qubits with a wand to make X, Y, Z measurements</li>
+              <li>Visualize measurement based quantum computing on a playing board</li>
+              <li>Prize: hire a Unity developer to mature Ashlesha's Tangram puzzle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+      <section className="umd-section">
       <div className="schedule-container">
         <div className="schedule-left">
           <p className="schedule-label">EVENT / TIME</p>
