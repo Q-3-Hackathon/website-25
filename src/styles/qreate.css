@@ -341,20 +341,6 @@ html, body {
     transform: scale(1.2);
   }
 
-.advanced-title {
-  text-align: center;
-  color: #86C7FC;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  background: #C7EAFF59;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(250, 250, 250, 0.11);
-  width: 20rem;
-
-
-}
 
 .advanced-card {
   background: #ffffff;
@@ -369,13 +355,35 @@ html, body {
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  height: 16rem;
+  height: 100rem;
   box-sizing: border-box;
-  width: 20rem;
+  width: 35rem;
   cursor: pointer;
 
 }
 
+.title-box {
+  background: #C7EAFF59;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  background: #86C7FC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  font-weight: 600;
+}
 
 
 .advanced-card:hover {
