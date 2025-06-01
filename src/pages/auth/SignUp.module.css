@@ -13,6 +13,19 @@
     gap: 1rem;
     width: 100%;
     justify-content: space-between;
+    /* margin-bottom: 2rem; */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .submitButton {
