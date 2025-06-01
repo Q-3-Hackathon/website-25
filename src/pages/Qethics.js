@@ -54,7 +54,10 @@ function Qethics() {
           <div className="card" />
           <div className="card" />
         </div>
+
         </section>
+
+
 
         <section className="intro-section" style={{ textAlign: 'center'}}>
           <h2 className="title">Challenges</h2>

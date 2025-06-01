@@ -3,6 +3,11 @@ import { useState } from 'react';
 import umdlogo from '../assets/images/umdlogo.png';
 import logo from '../assets/images/Q3logotext.png';
 import '../styles/qreate.css';
+import oshiro from "../assets/images/speakers/oshiro.png";
+import yungerhalpern from "../assets/images/speakers/nicolehalpern.png";
+import danielserrano from "../assets/images/speakers/danielserrano.png";
+import benally from "../assets/images/speakers/benally.png";
+
 
 function Qreate() {
   const slides = [
@@ -77,12 +82,35 @@ function Qreate() {
       <div className="speakers-header-box">
         <h2 className="title">Our Speakers</h2>
       </div>
+
       <div className="cards-container">
-        <div className="card" />
-        <div className="card" />
-        <div className="card" />
-        <div className="card" />
-        <div className="card" />
+        <Link to="speakers/scottoshiro" className="speaker-card">
+          <img src={oshiro} alt="Scott Oshiro" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Scott Oshiro</h3>
+          </div>
+        </Link>
+
+        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
+          <img src={yungerhalpern} alt="Nicole Yunger Halpern" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Nicole Yunger Halpern</h3>
+          </div>
+        </Link>
+
+        <Link to="speakers/danielserrano" className="speaker-card">
+          <img src={danielserrano} alt="Daniel Serrano" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Daniel Serrano</h3>
+          </div>
+        </Link>
+
+        <Link to="/speakers/onribenally" className="speaker-card">
+          <img src={benally} alt="Onri Benally" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Onri Benally</h3>
+          </div>
+        </Link>
       </div>
     </section>
 
@@ -122,16 +150,67 @@ function Qreate() {
         <button onClick={next} className="slider-arrow">→</button>
       </div>
     </section>
-    
 
-    <section className="intro-section" style={{ textAlign: 'center'}}>
-      <h2 className="title">Challenges</h2>
-      <p className="paragraph">
-          Bring out your inner creativity and solve challenges that involve creating animations, music, games, and art to bring quantum to all. Challenges will be announced end of June!
-      </p>
-    </section>  
 
-    <section className="umd-section">
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', margin: '2rem 0' }}>
+      {/* Titles Row */}
+      <div style={{ display: 'flex', gap: '1.5rem' }}>
+        <div style={{ flex: '2' }}>
+          <div className="title-box">
+            <h2 className="title">Challenges</h2>
+          </div>
+        </div>
+        <div style={{ flex: '1' }}>
+          <div className="title-box">
+            <h2 className="title advanced">Advanced</h2>
+          </div>
+        </div>
+      </div>
+
+      {/* Cards Row */}
+      <div style={{ display: 'flex', gap: '1.5rem' }}>
+        {/* Challenges Card 1 */}
+        <div style={{ flex: '2' }}>
+          <div className="advanced-card" style={{ height: '100%' }}>
+            <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
+              <li>Creating a visualization of how entanglement spreads</li>
+              <li>Creating a zeemax visualization of the classical interference in Young's N-slit</li>
+              <li>Demonstrating how lattice defects work</li>
+              <li>Simulate the graph state manipulations in this paper</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Challenges Card 2 */}
+        <div style={{ flex: '2' }}>
+          <div className="advanced-card" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
+              <li>Demonstration of time-multiplexed swaps for entanglement distribution</li>
+              <li>Simulate percolation based creation of large random entangled states among an array of color center quantum memories </li>
+              <li>Creating cluster states of photons for photonic quantum computing</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Advanced Card */}
+        <div style={{ flex: '1' }}>
+          <div className="advanced-card" style={{ height: '100%' }}>
+            <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
+              <li>"Walk through" the Raussendorf lattice
+              "See" the qubits decohere over time
+              Touch the qubits with a wand to make X, Y, Z measurements</li>
+              <li>Visualize measurement based quantum computing on a playing board
+              Prize: hire a Unity developer to mature Ashlesha's Tangram puzzle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+      <section className="umd-section">
       <div className="schedule-container">
         <div className="schedule-left">
           <p className="schedule-label">EVENT / TIME</p>
