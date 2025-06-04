@@ -10,6 +10,12 @@ import Home from '../pages/Home';
 import QEE from '../pages/QEE';
 import '../styles/Navbar.css';
 import SignUp from '../pages/auth/SignUp';
+import ScottOshiro from '../pages/speakers/scottoshiro';
+import NicoleYungerHalpern from '../pages/speakers/nicoleyungerhalpern';
+import DanielSerrano from '../pages/speakers/danielserrano';
+import OnriJayBenally from '../pages/speakers/onrijaybenally';
+
+
 
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -47,6 +53,12 @@ function Navbar() {
               <Route path="/faq" element={<Faq />} />
               <Route path="/QEE" element={<QEE/>}/>
               <Route path="/signup" element={<SignUp />} />
+              <Route path="/speakers/scottoshiro" element={<ScottOshiro />} />
+              <Route path="/speakers/nicoleyungerhalpern" element={<NicoleYungerHalpern/>} />
+              <Route path="/speakers/danielserrano" element={<DanielSerrano />} />
+              <Route path="/speakers/onribenally" element={<OnriJayBenally/>} />
+
+
           </Routes>
           </div>
       </Router>
