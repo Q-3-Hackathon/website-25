@@ -1,0 +1,11 @@
+.profile-pic{
+    display: block;
+    margin-left: auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid #74C7FF
+}
+
+

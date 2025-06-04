@@ -82,30 +82,28 @@ function Qreate() {
       <div className="speakers-header-box">
         <h2 className="title">Our Speakers</h2>
       </div>
-
       <div className="cards-container">
-        <Link to="speakers/scottoshiro" className="speaker-card">
+        <Link to="/speakers/scottoshiro" className="speaker-card">
           <img src={oshiro} alt="Scott Oshiro" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Scott Oshiro</h3>
           </div>
         </Link>
-
-        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
+        <Link to="/sperakers/nicoleyungerhalpern" className="speaker-card">
           <img src={yungerhalpern} alt="Nicole Yunger Halpern" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Nicole Yunger Halpern</h3>
           </div>
         </Link>
 
-        <Link to="speakers/danielserrano" className="speaker-card">
+        <Link to="/speakers/danielserrano" className="speaker-card">
           <img src={danielserrano} alt="Daniel Serrano" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Daniel Serrano</h3>
           </div>
         </Link>
 
-        <Link to="/speakers/onribenally" className="speaker-card">
+        <Link to="/speakers/onrijaybenally" className="speaker-card">
           <img src={benally} alt="Onri Benally" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Onri Benally</h3>

@@ -1,5 +1,3 @@
-
-
 function Oshiro() {
     return (
       <div>

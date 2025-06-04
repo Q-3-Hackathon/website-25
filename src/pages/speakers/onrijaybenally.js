@@ -1,5 +1,3 @@
-
-
 function Benally() {
     return (
       <div>
