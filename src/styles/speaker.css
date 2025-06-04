@@ -5,7 +5,7 @@ html, body {
   }
 
 .header{
-    padding: 2rem 0rem 1rem;
+    padding: 2rem 1rem 1rem;
     margin: 5rem auto;
     background-color: #C6E3F74D;
  }
@@ -40,8 +40,10 @@ html, body {
 
 .speaker-content{
     max-width: 1200px;
+    min-width: 400px;
     margin: 0 auto;
-    padding: 1rem 0rem 8rem
+    padding: 1rem 1rem 8rem;
+    
 }
 
 .header-content .title{
@@ -50,7 +52,8 @@ html, body {
 }
 
 .speaker-box {
-    display: flex;         
+    display: flex;
+    flex-wrap: wrap;
     margin: 2rem auto 3rem;     
     background-color: white;
     padding: 1.5rem 4rem; 

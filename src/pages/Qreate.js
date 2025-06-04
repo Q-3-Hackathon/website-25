@@ -152,7 +152,7 @@ function Qreate() {
 
 
     {/* Challenges */}
-      <section className="intro-section" style={{textAlign: 'center', padding: '3rem 0rem 4rem'}}>
+      <section className="intro-section" style={{textAlign: 'center', padding: '3rem 2rem 4rem'}}>
           <h2 className="title"  style={{fontSize:'3rem' }}>Challenges</h2>
           <p className="paragraph">Whether you are an artist or a scientist, take on the challenge of joining the other side! 
             Teams are required to have at least one member in the arts/humanities. Win $$$ prizes or a mini quantum sensor! Challenges will be announced end of June! Get ready to flip the switch. </p>

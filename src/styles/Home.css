@@ -1,6 +1,7 @@
 .Home {
   text-align: center;
   justify-content: center;
+  align-content: center;
   z-index: 0;
 }
 
@@ -19,9 +20,11 @@
 
 .home-content {
   max-width: 1200px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: justify;
   justify-content: center;
   padding: 0rem 0rem 5rem;
   margin: 0 max(100px, 20vw);
@@ -34,14 +37,17 @@
 
 .pillar {
   border: 3px solid #175A83;
-  padding: 20px 70px 40px;
+  padding: 20px 20px 40px;
   margin: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
   text-overflow: wrap;
   max-width: max(200px, 20vw);
+  min-width: 300px;
+  max-height: 400px;
   box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
   justify-content: center;
+  text-align:center;
 }
 
 .pillar:hover {
@@ -52,10 +58,10 @@
 
 .title {
     display: inline-block;               
-    margin: 0.5rem 0;                   
+    margin: 2rem 0rem 0rem;                   
     text-align: left;                  
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
+    font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
     padding: 0rem 0rem 0rem;
     background-image: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
     background-clip: text;               
@@ -126,3 +132,21 @@
   transform: scale(1.2);
 }
 
+@keyframes scroll-slides {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0); }   /* loop back */
+}
+
+.slider-track {
+  animation: scroll-slides 16s ease-in-out infinite;
+}

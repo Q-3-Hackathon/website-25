@@ -7,9 +7,12 @@ html, body {
 .intro-section {
     padding: 2rem 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     background-color: white;
-  
+    text-align: justify;
+    align-content: center;
+    text-justify: center;
+    min-width:400px;
 }
 
   .intro-content {
@@ -18,6 +21,8 @@ html, body {
     justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .left {
@@ -43,7 +48,7 @@ html, body {
 
   .right .logo {
     max-width: 100%;
-    width: 100%;
+    min-width: 20%;
     padding: 4rem 0rem 4rem;
   }
 
@@ -112,6 +117,7 @@ html, body {
     position: relative;
     padding: 2rem 1rem 4rem;            
     background-color: white;
+    min-width: 400px;
   }
 
 
@@ -127,21 +133,24 @@ html, body {
 
   .speakers-section .title {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(0.5rem, 2.5rem, 4rem);
+    font-size: clamp(0.5rem, 2.5rem, 2.5rem);
     background: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     text-align: center;
-    padding: 1rem 2rem 1rem;     
+    padding: 0rem 1rem 0rem;     
+    margin: 1rem auto;
   }
 
   .speakers-section .cards-container {
+    justify-content:center;
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 6rem;
-    padding: 2rem;
+    padding: 2rem 4rem 0rem;
     max-width: 1000px;
     margin: 2.5rem auto 0;
   }
@@ -163,10 +172,8 @@ html, body {
     height: 15rem;
     box-sizing: border-box;
     cursor: pointer;
-    /* subtle elevation + lift on hover */
-    background: #000;             /* fallback while image loads */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #000;            
+
   }
 
   .speaker-card:hover {
