@@ -83,7 +83,6 @@ function Qreate() {
       <div className="speakers-header-box">
         <h2 className="title">Our Speakers</h2>
       </div>
-
       <div className="cards-container">
         <Link to="/oshiro" className="speaker-card">
           <img src={oshiro} alt="Scott Oshiro" className="speakerspic"/>
