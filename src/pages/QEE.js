@@ -15,7 +15,7 @@ function QEE() {
               <img src={qeelogo} alt="QEE Logo" className="qee-logo" />
             </div>
           <div className="intro-section">
-            <h1 className="title">QEE Events to Support the Q<sup>3</sup> Effort</h1>
+            <h1 className="title" style={{fontSize: '3rem', padding: '0px 0px 0px'}}>QEE Events to Support the Q<sup>3</sup> Effort</h1>
             <p className="paragraph">Quantum Engineering Ethics (QEE) is a student organization founded and led by Sandra Al Hames in 
             December of 2024 at USC. The purpose of these events is to prepare students for the Hackathon and act 
             as an Introduction to Quantum Computing.</p>
