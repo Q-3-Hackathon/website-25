@@ -40,6 +40,25 @@ function Resources() {
                     <h2>Bootcamp</h2>
                     <p>Design challenges of superconducting quantum chips</p>
                 </a>
+
+                <a href="https://github.com/OJB-Quantum/QC-Hardware-How-To" className="textposition resource-link">
+                    <img src={res} alt="Bootcamp" className="resourcespic"/>
+                    <h2>QC Hardware How To</h2>
+                    <p>Onri Jay Benally's Everything you need for quantum hardware engineering</p>
+                </a>
+
+                <a href="https://github.com/OJB-Quantum/Qiskit-Metal-to-Litho" className="textposition resource-link">
+                    <img src={res} alt="Bootcamp" className="resourcespic"/>
+                    <h2>Qiskit Metal to Lithography</h2>
+                    <p>Onri Jay Benally's Qiskit Metal to Lithography</p>
+                </a>
+
+                <a href="https://github.com/OJB-Quantum/Free-Education" className="textposition resource-link">
+                    <img src={res} alt="Bootcamp" className="resourcespic"/>
+                    <h2>Free Educational Materials</h2>
+                    <p>A collection of free educational materials, most of which are interactive or 3D animated. Curated by Onri Jay Benally</p>
+                </a>
+
             </div>
         </div>
     );
