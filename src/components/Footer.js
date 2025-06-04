@@ -1,6 +1,6 @@
 import '../styles/Footer.css';
 import logo from '../assets/images/Q3logotext.png';
-import umdlogo from '../assets/images/umdlogo.png';
+import iyqlogo from '../assets/images/IYQ.png';
 
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
         <div className='Footer'>
             <img src={logo} className="footer-logo" alt="Q^3 Logo" />
             <div className='footer-middle'>
-            <img src={umdlogo} className="umd-logo" alt="UMD Logo" />
+            <img src={iyqlogo} className="umd-logo" alt="IYQ Logo" />
             </div>
             <div className = 'footer-links'>
                 <a href='/' style={{ textDecoration: 'none'}}>Home</a>

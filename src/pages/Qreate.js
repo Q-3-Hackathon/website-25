@@ -4,9 +4,9 @@ import umdlogo from '../assets/images/umdlogo.png';
 import logo from '../assets/images/Q3logotext.png';
 import '../styles/qreate.css';
 import oshiro from "../assets/images/speakers/oshiro.png";
-import yungerhalpern from "../assets/images/speakers/nicolehalpern.png";
 import danielserrano from "../assets/images/speakers/danielserrano.png";
 import benally from "../assets/images/speakers/benally.png";
+import bruce from "../assets/images/speakers/bruce.jpg";
 
 
 function Qreate() {
@@ -32,6 +32,7 @@ function Qreate() {
         'LiteraryDJ Quantum Poetry',
         'Quantum Intuition',
         'Quantum Choreographics',
+        'Science & Music of the Bloch Sphere',
         'And More!',
       ],
     },
@@ -82,33 +83,32 @@ function Qreate() {
       <div className="speakers-header-box">
         <h2 className="title">Our Speakers</h2>
       </div>
-
       <div className="cards-container">
-        <Link to="speakers/scottoshiro" className="speaker-card">
+        <Link to="/oshiro" className="speaker-card">
           <img src={oshiro} alt="Scott Oshiro" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Scott Oshiro</h3>
           </div>
         </Link>
 
-        <Link to="/speakers/nicoleyungerhalpern" className="speaker-card">
-          <img src={yungerhalpern} alt="Nicole Yunger Halpern" className="speakerspic"/>
-          <div className="speaker-info">
-            <h3>Nicole Yunger Halpern</h3>
-          </div>
-        </Link>
-
-        <Link to="speakers/danielserrano" className="speaker-card">
+        <Link to="/serrano" className="speaker-card">
           <img src={danielserrano} alt="Daniel Serrano" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Daniel Serrano</h3>
           </div>
         </Link>
 
-        <Link to="/speakers/onribenally" className="speaker-card">
-          <img src={benally} alt="Onri Benally" className="speakerspic"/>
+        <Link to="/benally" className="speaker-card">
+          <img src={benally} alt="Onri Jay Benally" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Onri Benally</h3>
+          </div>
+        </Link>
+
+        <Link to="/bruce" className="speaker-card">
+          <img src={bruce} alt="Bruce Rosenbaum" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Bruce Rosenbaum</h3>
           </div>
         </Link>
       </div>
@@ -116,9 +116,8 @@ function Qreate() {
 
     <section className="activities-section">
       <div className="speakers-header-box">
-        <h2 className="title">{slides[index].title}</h2>
+        <h2 className="title" style={{fontSize:'3rem'}}>{slides[index].title}</h2>
       </div>
-
       <div className="slider-container">
         <div
           className="slider-content"
@@ -152,10 +151,17 @@ function Qreate() {
     </section>
 
 
+    {/* Challenges */}
+      <section className="intro-section" style={{textAlign: 'center', padding: '3rem 0rem 4rem'}}>
+          <h2 className="title"  style={{fontSize:'3rem' }}>Challenges</h2>
+          <p className="paragraph">Whether you are an artist or a scientist, take on the challenge of joining the other side! 
+            Teams are required to have at least one member in the arts/humanities. Win $$$ prizes or a mini quantum sensor! Challenges will be announced end of June! Get ready to flip the switch. </p>
+      </section>  
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', margin: '2rem 0' }}>
+    {/*Uncomment when challenges go live*/}  
+    {/*<div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', margin: '2rem 0' }}>
       {/* Titles Row */}
-      <div style={{ display: 'flex', gap: '1.5rem' }}>
+      {/*<div style={{ display: 'flex', gap: '1.5rem' }}>
         <div style={{ flex: '2' }}>
           <div className="title-box">
             <h2 className="title">Challenges</h2>
@@ -166,11 +172,11 @@ function Qreate() {
             <h2 className="title advanced">Advanced</h2>
           </div>
         </div>
-      </div>
+      </div>*/}
 
-      {/* Cards Row */}
-      <div style={{ display: 'flex', gap: '1.5rem' }}>
+      {/*<div style={{ display: 'flex', gap: '1.5rem' }}>*/}
         {/* Challenges Card 1 */}
+        {/*}
         <div style={{ flex: '2' }}>
           <div className="advanced-card" style={{ height: '100%' }}>
             <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
@@ -181,8 +187,9 @@ function Qreate() {
             </ul>
           </div>
         </div>
-
+        */}
         {/* Challenges Card 2 */}
+        {/*
         <div style={{ flex: '2' }}>
           <div className="advanced-card" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
@@ -191,10 +198,11 @@ function Qreate() {
               <li>Creating cluster states of photons for photonic quantum computing</li>
             </ul>
           </div>
-        </div>
+        </div>*/}
 
         {/* Advanced Card */}
-        <div style={{ flex: '1' }}>
+        
+        {/*<div style={{ flex: '1' }}>
           <div className="advanced-card" style={{ height: '100%' }}>
             <ul className="challenge-list" style={{ color: '#2079AF', paddingLeft: '1.5rem', margin: '1rem 0' }}>
               <li>"Walk through" the Raussendorf lattice
@@ -206,9 +214,7 @@ function Qreate() {
           </div>
         </div>
       </div>
-      </div>
-
-
+    </div>*/}
 
       <section className="umd-section">
       <div className="schedule-container">
@@ -226,7 +232,7 @@ function Qreate() {
 
     <section className="intro-section">
     <div className="intro-content">
-    <div style={{display: 'flex', alignItems: 'center', gap: '8rem'}}>
+    <div style={{display: 'flex', alignItems: 'center', gap: '8rem',padding: '0rem 0rem 2rem'}}>
     <div className="left">
         <h1 className="title" style={{textAlign: 'center'}}>
           <span>Q<sup>3</sup> @ USC</span>

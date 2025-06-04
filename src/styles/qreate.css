@@ -9,6 +9,7 @@ html, body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: white;
+  
   }
 
   .intro-content {
@@ -24,22 +25,9 @@ html, body {
     max-width: 600px;
   }
 
-  .title {
-    display: inline-block;               
-    margin: 0.5rem 0;                   
-    text-align: left;                  
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    background-image: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
-    background-clip: text;               
-    -webkit-background-clip: text;       
-    color: transparent;                 
-    -webkit-text-fill-color: transparent; 
-  }
-
   .paragraph {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
     text-align: justify;
@@ -53,10 +41,10 @@ html, body {
     align-items: center; 
   }
 
-  .logo {
+  .right .logo {
     max-width: 100%;
     width: 100%;
-    height: auto;
+    padding: 4rem 0rem 4rem;
   }
 
   .date-box {
@@ -65,11 +53,11 @@ html, body {
     background-color: rgba(199, 234, 255, 0.5);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #333;
     font-weight: 500;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     box-shadow:2px 4px 2px rgba(0, 0, 0, 0.3) ;
   }
 
@@ -121,47 +109,47 @@ html, body {
 
   .speakers-section {
     position: relative;
-    padding: 4rem 1rem 2rem;            
+    padding: 2rem 1rem 4rem;            
     background-color: white;
   }
 
 
   .speakers-section .speakers-header-box {
-    position: absolute;
-    top: 0;                              
+    position: absolute;                            
     left: 80%;                           
     transform: translate(-50%, -50%);    
     background-color: white;
-    padding: 0.5rem 2rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
     z-index: 2;
   }
 
   .speakers-section .title {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     background: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     text-align: center;
+    padding: 1rem 2rem 1rem;     
   }
 
   .speakers-section .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 6rem;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 2.5rem auto 0;
   }
 
 
   .speaker-card {
-    background: #6abde9;
-    border-radius: 0.5rem;
+    position: relative;
+    background-color: #C6E3F7B2;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -170,11 +158,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
-    height: 16rem;
-    box-sizing: border-box;
     width: 12rem;
+    height: 15rem;
+    box-sizing: border-box;
     cursor: pointer;
+    /* subtle elevation + lift on hover */
+    background: #000;             /* fallback while image loads */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .speaker-card:hover {
@@ -184,22 +175,39 @@ html, body {
   }
 
   .speakerspic {
-    width: 130px;
-    height: 130px;
-    border-radius: 10%;
+    width: 100%;          
+    height: 100%;
+    display:block;
     object-fit: cover;
-    border: 3px solid #74C7FF
   }
 
   .speaker-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     text-align: center;
     padding: 0 1rem 1rem;
     width: 100%;
+
+  
+    background: rgba(0,0,0,0.75); /* semi-transparent dark banner */
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem;
+
+    opacity: 0;
+    transform: translateY(100%);  
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .speaker-card:hover .speaker-info {
+  opacity: 1;
+  transform: translateY(0);     /* slide up into view */
   }
 
   .speaker-info h3 {
     margin: 0.5rem 0 0.25rem;
-    color: #333;
+    color: #ebf7ff;
     font-size: 1.25rem;
     font-weight: 600;
   }
@@ -217,6 +225,10 @@ html, body {
     text-align: center;
   }
 
+  #c-text{
+    text-align: center;
+  }
+
   .schedule-container {
     max-width: 1200px;
     padding: 3.5rem;
@@ -226,7 +238,6 @@ html, body {
     justify-content: center;
     background-color: transparent
   }
-
 
   .schedule-left{
     flex: 1;
