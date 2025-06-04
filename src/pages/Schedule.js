@@ -2,7 +2,7 @@ function Schedule() {
   return (
     <div>
       <h1>Schedule</h1>
-      <p>This is the schedule page.</p>
+      <p>Schedule will be up soon. Stay tuned!</p>
     </div>
   );
 }
