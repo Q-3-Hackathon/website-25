@@ -10,6 +10,7 @@ import cqn from '../assets/images/sponsor-logos/cqn-logo-black.png';
 import itu from '../assets/images/sponsor-logos/ITU_logo.png';
 import mqa from '../assets/images/sponsor-logos/mqa_logo.png';
 import qsf from '../assets/images/sponsor-logos/umd_qsf_logo.png'
+import unitary from '../assets/images/sponsor-logos/UFoundation.png'
 
 function Home() {
   const slides = [
@@ -17,6 +18,7 @@ function Home() {
     { src: itu,  alt: 'UN International Telecommunication Union'},
     { src: mqa, alt: 'Mid-Atlantic Quantum Alliance'},
     { src: qsf, alt: 'Quantum Startup Foundry'},
+    { src: unitary, alt: 'Unitary Foundation'},
   ];
 
   const [index, setIndex] = useState(0);
