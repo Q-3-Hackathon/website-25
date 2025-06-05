@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 function Schedule() {
   return (
     <div>
+
     {/*Tab Headings*/}
     <Tabs>
     <TabList>
@@ -10,13 +11,16 @@ function Schedule() {
         <div style={{ marginTop: '10px', marginLeft: '30px', width: '650px', height: '120px', borderStyle: 'solid', borderRadius: '10px', borderColor: 'white', background: 'linear-gradient(270deg, #cbdeeb, #5ec1e5)', boxShadow: ' 5px 5px 5px  #cbdeeb'}}>
           <h1 style={{marginTop: '20px', color: 'white', textShadow: '2px 2px rgb(215, 241, 248)'}}>UMD Schedule</h1>
         </div>
+       
       </Tab>
       <Tab style={{listStyle: 'none'}}>
       <div style={{marginTop: '-120px', marginLeft: '690px', width: '670px', height: '120px', borderStyle: 'solid', borderColor: 'white', borderRadius: '10px', background: 'linear-gradient(270deg, #cbdeeb, #5ec1e5)',boxShadow: ' 5px 5px 5px  #cbdeeb'}}>
             <h1 style={{marginTop: '20px',  textShadow: '2px 2px rgb(232, 238, 239)'}}>USC Schedule</h1>
       </div>
+
       </Tab>
     </TabList>
+
     {/*UMD Schedule*/}
     <TabPanel>
       <h2 style={{textAlign: 'center', margin: '10px', textDecoration: 'underline'}}>UMD Schedule</h2>
@@ -26,7 +30,7 @@ function Schedule() {
       <h4 style={{fontFamily: 'Poppins',marginLeft: '199px', marginTop: '-5px',marginBottom: '10px'}}>September 12</h4>
       <div class="flex-container" style={{marginLeft: '50px'}}>
        <div class="flex-item white" style={{marginTop: '50px'}}>
-       <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter', fontWeight: 'normal' }}>Welcome Dinner Reception</h5>
+       <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Welcome Dinner Reception</h5>
        <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>and Registration</h5>
        <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Exhibition: Quantum Choreobotics</h5>
        <h5 style={{marginTop: '-60px', marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>4 - 6 PM</h5>
@@ -35,8 +39,8 @@ function Schedule() {
       </div>
       </div>
     {/*Saturday */}
-    <h3 style={{fontFamily: 'Poppins', marginLeft: '670px', marginTop: '-1383px'}}>Saturday,</h3>
-      <h4 style={{fontFamily: 'Poppins',marginLeft: '670px', marginTop: '-5px',marginBottom: '10px'}}>September 13</h4>
+    <h3 style={{fontFamily: 'Poppins', marginLeft: '680px', marginTop: '-1383px'}}>Saturday,</h3>
+      <h4 style={{fontFamily: 'Poppins',marginLeft: '680px', marginTop: '-5px',marginBottom: '10px'}}>September 13</h4>
       <div class="flex-container" style={{marginLeft: '510px'}}>
          <div class="flex-item white" style={{marginTop: '50px'}}>
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Breakfast</h5>
@@ -117,7 +121,7 @@ function Schedule() {
       </div>
       </h4>
       {/*Sunday*/}
-      <h3 style={{fontFamily: 'Poppins', marginLeft: '1125px', marginTop: '-1383px'}}>Sunday,</h3>
+      <h3 style={{fontFamily: 'Poppins', marginLeft: '1125px', marginTop: '-1385px'}}>Sunday,</h3>
       <h4 style={{fontFamily: 'Poppins',marginLeft: '1125px', marginTop: '-5px',marginBottom: '10px'}}>September 14</h4>
       <div class="flex-container" style={{marginLeft: '970px', marginBottom: '20px'}}></div>
       </TabPanel>
@@ -228,82 +232,90 @@ function Schedule() {
       <div class="flex-item white" style={{marginTop: '50px'}}>
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Breakfast</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>9 - 10 AM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white" >
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Quantum</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Computing</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Lecture</h5>
           <h5 style={{ marginTop: '-60px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>10 - 11 AM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white" >
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Networking Break</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>‎</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>‎</h5>
           <h5 style={{ marginTop: '-60px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>10 - 11:30 AM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white" >
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Quantum</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Competition</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>‎ </h5>
           <h5 style={{ marginTop: '-60px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>11:30 - 12:30 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white">
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Lunch Break</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>12:30 - 1:30 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
-         <div class="flex-item white" style={{fontWeight: 'normal'}}>
+         <div class="flex-item white">
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Quantum Competition</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>1:30 - 3 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white" >
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Networking</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Break</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>‎</h5>
           <h5 style={{ marginTop: '-60px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>3 - 3:30 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white">
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Q^3 Quantum Panel</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>3:30 - 5 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white" >
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Quantum Competition</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Final Judging and</h5>
           <h5 style={{marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Announcements</h5>
           <h5 style={{ marginTop: '-60px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>5 - 6 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white">
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Closing Remarks, Group Photo</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>TBD</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
          <div class="flex-item white">
           <h5 style={{marginTop: '20px',marginLeft: '15px' ,  fontFamily: 'Inter' , fontWeight: 'normal'}}>Dinner Reception</h5>
           <h5 style={{marginTop: '-21px',marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'bold'}}>6 - 8 PM</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>MCB 101/102</h5>
-          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'normal'}}>Area</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>MCB 101/102</h5>
+          <h5 style={{ marginLeft: '280px' ,  fontFamily: 'Inter', fontWeight: 'lighter'}}>Area</h5>
          </div>
+
+
       </div>
+
+
+
+
     </TabPanel>
   </Tabs>
+
+     
     </div>
   );
 }
