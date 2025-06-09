@@ -144,9 +144,6 @@
 
   75%  { transform: translateX(-300%); }
   95%  { transform: translateX(-300%); }
-  100% { transform: translateX(0); }   /* loop back */
+  100% { transform: translateX(0); }  
 }
 
-.slider-track {
-  animation: scroll-slides 16s ease-in-out infinite;
-}

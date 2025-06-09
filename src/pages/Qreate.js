@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+//import { useState } from 'react';
 import umdlogo from '../assets/images/umdlogo.png';
 import logo from '../assets/images/Q3logotext.png';
 import '../styles/qreate.css';
 import oshiro from "../assets/images/speakers/oshiro.png";
 import danielserrano from "../assets/images/speakers/danielserrano.png";
 import benally from "../assets/images/speakers/benally.png";
-import bruce from "../assets/images/speakers/bruce.jpg";
+//import bruce from "../assets/images/speakers/bruce.jpg";
 
 
 function Qreate() {
+  /*
   const slides = [
     {
       title: 'Keynotes',
       items: [
         'Scott Oshiro – Musician & Quantum Physicist',
-        'Nicole Yunger Halpern – Writer & Quantum Physicist',
       ],
     },
     {
@@ -40,7 +40,7 @@ function Qreate() {
 
   const [index, setIndex] = useState(0);
   const prev = () => setIndex((index - 1 + slides.length) % slides.length);
-  const next = () => setIndex((index + 1) % slides.length);
+  const next = () => setIndex((index + 1) % slides.length); */
 
   return (
     <>
@@ -105,16 +105,16 @@ function Qreate() {
           </div>
         </Link>
 
-        <Link to="/bruce" className="speaker-card">
+        {/*<Link to="/bruce" className="speaker-card">
           <img src={bruce} alt="Bruce Rosenbaum" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Bruce Rosenbaum</h3>
           </div>
-        </Link>
+        </Link>*/}
       </div>
     </section>
-
-    <section className="activities-section">
+    
+    {/*<section className="activities-section">
       <div className="speakers-header-box">
         <h2 className="title" style={{fontSize:'3rem'}}>{slides[index].title}</h2>
       </div>
@@ -148,7 +148,7 @@ function Qreate() {
         </div>
         <button onClick={next} className="slider-arrow">→</button>
       </div>
-    </section>
+    </section>*/}
 
 
     {/* Challenges */}

@@ -15,7 +15,7 @@ function Footer() {
                 <a href='/' style={{ textDecoration: 'none'}}>Home</a>
                 <a href="/registration" style={{ textDecoration: 'none'}}>Registration</a>
                 <a href="/faq" style={{ textDecoration: 'none'}}>FAQ</a>
-                <a href="mailto:q3initiative@gmail.com" style={{ textDecoration: 'none'}}>Contact Us</a>
+                <a href="mailto:hello@q3initiative.org" style={{ textDecoration: 'none'}}>Contact Us</a>
             </div>
         </div>
   );
