@@ -71,6 +71,9 @@ function Home() {
         <img src={rvec} style={hstyle.rvec} alt="Right Vector" />
         <img src={lvec} style={hstyle.lvec} alt="Left Vector" />
         <img src={logo} className="logo-img" alt="Q^3 Logo" />
+        <head>
+        <link rel="icon" type="image/x-icon" href={logo} />
+        </head>
         <div className='home-content'>
           <h1 className='title' style={{fontSize: '7rem'}}>Q<sup>3</sup> Initiative</h1>
           <p style={{fontSize: '2rem', padding: '0rem 1rem 2rem', color: '#2079AF', textShadow: '2px 2px 2px rgba(0, 0, 0, 0.4)'}}>September 12 - 14, 2025</p>
