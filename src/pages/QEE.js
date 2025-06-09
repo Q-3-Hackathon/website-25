@@ -1,7 +1,3 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import usclogo from '../assets/images/usclogo.png';
-import logo from '../assets/images/Q3logotext.png';
 import qeelogo from '../assets/images/qeelogo.png';
 import '../styles/qreate.css';
 import '../styles/qethics.css';
