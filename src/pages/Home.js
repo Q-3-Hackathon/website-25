@@ -11,6 +11,7 @@ import itu from '../assets/images/sponsor-logos/ITU_logo.png';
 import mqa from '../assets/images/sponsor-logos/mqa_logo.png';
 import qsf from '../assets/images/sponsor-logos/umd_qsf_logo.png'
 import unitary from '../assets/images/sponsor-logos/UFoundation.png'
+import qv from '../assets/images/sponsor-logos/QV ICON.png'
 
 function Home() {
   const slides = [
@@ -19,6 +20,7 @@ function Home() {
     { src: mqa, alt: 'Mid-Atlantic Quantum Alliance'},
     { src: qsf, alt: 'Quantum Startup Foundry'},
     { src: unitary, alt: 'Unitary Foundation'},
+    { src: qv, alt: 'Quantum Village'},
   ];
 
   const [index, setIndex] = useState(0);

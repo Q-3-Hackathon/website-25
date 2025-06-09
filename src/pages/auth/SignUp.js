@@ -1,11 +1,11 @@
-import React, { use, useRef, useState} from 'react';
+import React, { useRef, useState} from 'react';
 import { FIRESTORE_DB } from '../../firebase/FirebaseConfig';
 import SelectButton from '../../components/SelectButton';
 import TextInput from '../../components/TextInput';
 import BubbleSelector from '../../components/BubbleSelector';
 import { collection, addDoc } from 'firebase/firestore';
 import styles from './SignUp.module.css';
-import { schoolNames } from '../../assets/schools';
+
 
 function SignUp() {
     const firstName = useRef('');
@@ -41,7 +41,7 @@ function SignUp() {
     const researchPrompt = useRef('');
     const q3Prompt = useRef('');
 
-    {/* Need to implement terms and conditions for the forms */}
+    // Need to implement terms and conditions for the forms 
 
     const canSubmit = useRef(true);
 
