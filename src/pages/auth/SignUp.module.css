@@ -10,9 +10,26 @@
 
 .formRow {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
-    justify-content: space-between;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .submitButton {
