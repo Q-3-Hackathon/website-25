@@ -82,8 +82,8 @@
 
 .reg-btn {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
   padding: 100px 0px;
   align-items: flex-start;
   flex-wrap: wrap;
