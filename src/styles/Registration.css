@@ -83,9 +83,10 @@
 .reg-btn {
   display: flex;
   justify-content: space-around;
-  gap: 100px;
-  padding-top: 100px;
+  gap: 2rem;
+  padding: 100px 0px;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 button {
@@ -96,6 +97,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 #vol-btn,
@@ -111,6 +113,8 @@ button {
   font-size: 1.5rem;
   background-color: #2079AF;
   margin-bottom: 20px;
+  border-radius: 20px;
+  transform: 0.25s opacity;
 }
 
 #vol-btn:hover,
@@ -118,61 +122,17 @@ button {
   opacity: 0.5;
 }
 
-.vol-sym-btn,
-.exp-sym-btn {
-  text-decoration: none;
-  border: none;
-  background: none;
-  width: 0px;
-  margin-left: -30px;
-  ;
-  position: relative;
-  margin-bottom: 250px;
-}
-
-.vol-sym-btn img,
-.exp-sym-btn img {
-  width: 25px;
-  height: 25px;
-  transition: transform 0.2s ease;
-}
-
-.vol-sym-btn:hover img,
-.exp-sym-btn:hover img {
-  transform: scale(1.1);
-}
-
 .popup-box {
-  opacity: 0;
   transform: scale(0.95);
   transition: all 0.3s ease;
   pointer-events: none;
-  position: absolute;
-  top: 120%;
-  /* position below icon */
-  left: 50%;
-  transform: translateX(-50%) scale(0.95);
-  background-color: #c7e9ff;
   padding: 16px 24px;
   border-radius: 20px;
   text-align: center;
-  width: 200px;
+  width: 300px;
   z-index: 10;
-  margin-left: 12px;
-  ;
   font-size: 0.8rem;
   font-family: 'Poppins', sans-serif;
   color: #2079AF;
-}
-
-.exp-sym-btn:hover .popup-box {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
-  pointer-events: auto;
-}
-
-.vol-sym-btn:hover .popup-box {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
-  pointer-events: auto;
+  background-color: #c7e9ff;
 }
