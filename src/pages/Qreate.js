@@ -232,7 +232,6 @@ function Qreate() {
 
     <section className="intro-section">
     <div className="intro-content">
-    <div style={{display: 'flex', alignItems: 'center', gap: '8rem',padding: '0rem 0rem 2rem'}}>
     <div className="left">
         <h1 className="title" style={{textAlign: 'center'}}>
           <span>Q<sup>3</sup> @ USC</span>
@@ -244,7 +243,6 @@ function Qreate() {
         <div className="right" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto'}}>
           <Link to="/Qethics" className="btn" style={{fontWeight: 400 }}>Quantum Leap to the West Coast→</Link>
         </div>
-    </div>
     </div>
     </section>
 

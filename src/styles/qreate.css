@@ -17,12 +17,14 @@ html, body {
 
   .intro-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 8rem;
     flex-wrap: wrap;
     margin-left: 1rem;
     margin-right: 1rem;
+    gap: '8rem';
+    padding: '0rem 0rem 2rem';
   }
 
   .left {
@@ -31,7 +33,6 @@ html, body {
   }
 
   .paragraph {
-    margin-top: 1rem;
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
@@ -450,3 +451,37 @@ html, body {
 
 
   }
+
+  @media (max-width: 700px) {
+  .speakers-section .speakers-header-box {
+    position: static;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 1.5rem 0 1.5rem 0;
+    padding-left: 1rem;
+    left: 0;
+    transform: none;
+    display: block;
+  }
+
+  .speakers-section .cards-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 0 0 0;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  .speaker-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro-content {
+    display: inline !important;
+    flex-direction: column !important;
+  }
+}

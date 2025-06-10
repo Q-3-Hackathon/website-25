@@ -28,6 +28,9 @@ body {
   font-size: 1.2rem;
   background-color: rgb(251, 253, 255);
   color: black;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
 }
 
 h1 {
