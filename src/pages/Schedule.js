@@ -8,15 +8,14 @@ function Schedule() {
     <TabList>
       <Tab style={{listStyle: 'none'}}>
         <div style={{ marginTop: '10px', marginLeft: '30px', width: '650px', height: '120px', borderStyle: 'solid', borderRadius: '10px', borderColor: 'white', background: 'linear-gradient(270deg, #cbdeeb, #5ec1e5)', boxShadow: ' 5px 5px 5px  #cbdeeb'}}>
-          <h1 style={{marginTop: '20px', color: 'white', textShadow: '2px 2px rgb(215, 241, 248)'}}>UMD Schedule</h1>
+          <h1 style={{marginTop: '20px', color: 'white', textShadow: '2px 2px rgb(215, 241, 248)'}}>UMD Q^3 Schedule</h1>
         </div>
        
       </Tab>
       <Tab style={{listStyle: 'none'}}>
       <div style={{marginTop: '-120px', marginLeft: '690px', width: '670px', height: '120px', borderStyle: 'solid', borderColor: 'white', borderRadius: '10px', background: 'linear-gradient(270deg, #cbdeeb, #5ec1e5)',boxShadow: ' 5px 5px 5px  #cbdeeb'}}>
-            <h1 style={{marginTop: '20px',  textShadow: '2px 2px rgb(232, 238, 239)'}}>USC Schedule</h1>
+            <h1 style={{marginTop: '20px',  textShadow: '2px 2px rgb(232, 238, 239)'}}>USC Q^3 Schedule</h1>
       </div>
-
       </Tab>
     </TabList>
 
