@@ -7,8 +7,6 @@ function CheckboxSelector({ label, options, onChange, ref }) {
         else
             ref.current.value.push(option);
 
-        console.log('Current ref:', ref.current);
-
         if (onChange)
             onChange(ref.current);
     };
