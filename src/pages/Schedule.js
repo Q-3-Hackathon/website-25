@@ -3,7 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 function Schedule() {
   return (
     <div>
-
     {/*Tab Headings*/}
     <Tabs>
     <TabList>
