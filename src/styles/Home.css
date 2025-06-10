@@ -61,7 +61,7 @@
     margin: 2rem 0rem 0rem;                   
     text-align: left;                  
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
+    font-size: 3rem;
     padding: 0rem 0rem 0rem;
     background-image: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
     background-clip: text;               
@@ -76,6 +76,26 @@
     margin-right: 0;
   }
 
+  .page-title {
+    display: inline-block;               
+    margin: 2rem 0rem 0rem;                   
+    text-align: left;                  
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(5rem, 10vw, 7rem);
+    padding: 0rem 0rem 0rem;
+    background-image: linear-gradient(90deg, #74C7FF, #5EC1E5, #2079AF);
+    background-clip: text;               
+    -webkit-background-clip: text;       
+    color: transparent;                 
+    -webkit-text-fill-color: transparent; 
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: normal;
+    margin-left: 0;
+    margin-right: 0;
+  }
 .slider-frame {
   overflow: hidden;
   width: 100%;
