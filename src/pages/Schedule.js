@@ -1,7 +1,6 @@
 import '../styles/Schedule.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import '../styles/Schedule.css';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 function Schedule() {
   return (
     <div>
