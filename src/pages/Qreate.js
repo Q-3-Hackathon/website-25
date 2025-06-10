@@ -6,7 +6,8 @@ import '../styles/qreate.css';
 import oshiro from "../assets/images/speakers/oshiro.png";
 import danielserrano from "../assets/images/speakers/danielserrano.png";
 import benally from "../assets/images/speakers/benally.png";
-//import bruce from "../assets/images/speakers/bruce.jpg";
+import bruce from "../assets/images/speakers/bruce.jpg";
+import halpern from "../assets/images/speakers/nicolehalpern.png";
 
 
 function Qreate() {
@@ -105,12 +106,20 @@ function Qreate() {
           </div>
         </Link>
 
-        {/*<Link to="/bruce" className="speaker-card">
+        <Link to="/halpern" className="speaker-card">
+          <img src={halpern} alt="Nicole Yunger Halpern" className="speakerspic"/>
+          <div className="speaker-info">
+            <h3>Nicole Yunger Halpern</h3>
+          </div>
+        </Link>
+
+        <Link to="/bruce" className="speaker-card">
           <img src={bruce} alt="Bruce Rosenbaum" className="speakerspic"/>
           <div className="speaker-info">
             <h3>Bruce Rosenbaum</h3>
           </div>
-        </Link>*/}
+        </Link>
+
       </div>
     </section>
     
