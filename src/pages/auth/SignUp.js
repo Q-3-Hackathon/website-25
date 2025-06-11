@@ -1,47 +1,49 @@
-import React, { useRef, useState} from 'react';
+import React, { useRef } from 'react';
 import { FIRESTORE_DB } from '../../firebase/FirebaseConfig';
 import SelectButton from '../../components/SelectButton';
 import TextInput from '../../components/TextInput';
 import BubbleSelector from '../../components/BubbleSelector';
 import { collection, addDoc } from 'firebase/firestore';
 import styles from './SignUp.module.css';
-
+import { schoolNames } from '../../assets/schools';
+import CheckboxSelector from '../../components/CheckboxSelector';
 
 function SignUp() {
     const firstName = useRef('');
     const lastName = useRef('');
+    const phoneNumber = useRef('');
     const email = useRef('');
-    const phoneNum = useRef('');
     const institution = useRef('');
     const role = useRef('');
-    const otherRole = useRef('');
-    const whereHeard = useRef('');
-    const otherWhereHeard = useRef('');
-    const emergFirstName = useRef('');
-    const emergLastName = useRef('');
-    const emergRelation = useRef('');
-    const emergEmail = useRef('');
-    const emergNumber = useRef('');
+    const roleOther = useRef('');
+    const howHeard = useRef('');
+    const howHeardOther = useRef('');
 
     // volunteer
-    const availability = useRef('');
-    const shifts = useRef('');
-    const location = useRef('');
+    const availability = useRef({});
+    const shifts = useRef({});
+    const location = useRef({});
 
     // explorer
     const major = useRef('');
     const attendance = useRef('');
-    const whyQuantumArt = useRef('');
+    const why = useRef('');
     const favoriteSong = useRef('');
     const favoriteMovie = useRef('');
-    const favoriteBook = useRef('')
-    const favoriteGame = useRef('');
+    const favoriteMuseum = useRef('');
+    // const artPrompt = useRef('');
+    // const ethicsPrompt = useRef('');
     const bookPrompt = useRef('');
-    const artPrompt = useRef('');
+    const mergePrompt = useRef('');
     const researchPrompt = useRef('');
     const q3Prompt = useRef('');
 
-    // Need to implement terms and conditions for the forms 
+    // emergency contact information
+    const emergencyContactFirstName = useRef('');
+    const emergencyContactLastName = useRef('');
+    const emergencyContactPhoneNumber = useRef('');
+    const emergencyContactEmail = useRef('');
+    const emergencyContactRelationship = useRef('');
 
     const canSubmit = useRef(true);
 
@@ -54,30 +56,12 @@ function SignUp() {
     }
     const [userType, setUserType] = React.useState(urlParams.get('userType') || 'volunteer');
 
-    // multiple choice questions
-    const [selectedLocations, setSelectedLocations] = useState([]);
-    const [locationError, setLocationError] = useState('');
-
-    const handleCheckboxChange = (e) => {
-        const { value, checked } = e.target;
-        setSelectedLocations((prev) =>
-            checked ? [...prev, value] : prev.filter((v) => v !== value)
-        );
-
-        if (locationError) { 
-            setLocationError('');
-        }
-    };
-
+    const [showOtherRoleInput, setShowOtherRoleInput] = React.useState(false);
+    const [showOtherHowHeardInput, setShowOtherHowHeardInput] = React.useState(false);
     const [submitted, setSubmitted] = React.useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
-        if (selectedLocations.length === 0) {
-            setLocationError('Please select at least one option')
-            return;
-        }
 
         if (!canSubmit.current)
             return;
@@ -86,13 +70,16 @@ function SignUp() {
         const data = {
             firstName: firstName.current.value,
             lastName: lastName.current.value,
+            phoneNumber: phoneNumber.current.value.replace(/[^0-9]/g, ''),
             email: email.current.value,
-            phoneNum: phoneNum.current.value,
             institution: institution.current.value,
-            role: role.current.value,
-            otherRole: otherRole.current.value,
-            whereHeard: whereHeard.current.value,
-            otherWhereHeard: whereHeard.current.value
+            role: showOtherRoleInput ? roleOther.current.value : role.current.value,
+            howHeard: showOtherHowHeardInput ? howHeardOther.current.value : howHeard.current.value,
+            emergencyContactFirstName: emergencyContactFirstName.current.value,
+            emergencyContactLastName: emergencyContactLastName.current.value,
+            emergencyContactPhoneNumber: emergencyContactPhoneNumber.current.value.replace(/[^0-9]/g, ''),
+            emergencyContactEmail: emergencyContactEmail.current.value,
+            emergencyContactRelationship: emergencyContactRelationship.current.value,
         };
 
         if (userType === 'volunteer') {
@@ -102,13 +89,12 @@ function SignUp() {
         } else if (userType === 'explorer') {
             data.major = major.current.value;
             data.attendance = attendance.current.value;
-            data.whyQuantumArt = whyQuantumArt.current.value;
+            data.why = why.current.value;
             data.favoriteSong = favoriteSong.current.value;
             data.favoriteMovie = favoriteMovie.current.value;
-            data.favoriteGame = favoriteGame.current.value;
-            data.favoriteBook = favoriteBook.current.value;
-            data.artPrompt = artPrompt.current.value;
+            data.favoriteMuseum = favoriteMuseum.current.value;
             data.bookPrompt = bookPrompt.current.value;
+            data.mergePrompt = mergePrompt.current.value;
             data.researchPrompt = researchPrompt.current.value;
             data.q3Prompt = q3Prompt.current.value;
         }
@@ -144,214 +130,124 @@ function SignUp() {
 
                 <br />
 
-                <div className={styles.formGroup}>
-                    <label htmlFor="name" className="form-label">Name</label>
-                    <div className={styles.formRow}>
-                        <TextInput id="firstName" label="First Name" ref={firstName} required={true} style={{ flex: 1 }} />
-                        <TextInput id="lastName" label="Last Name" ref={lastName} required={true} style={{ flex: 1 }} />
-                    </div>
+                <div className={styles.formRow}>
+                    <TextInput label="First Name" ref={firstName} placeholder="John" />
+                    <TextInput label="Last Name" ref={lastName} placeholder="Doe" />
                 </div>
 
-                <TextInput label="Email" ref={email} showLabel={true} type="email" placeholder="ex: myname@example.com" required={true} />
-                <TextInput label="Phone Number" ref={phoneNum} showLabel={true} placeholder="(000) 000-000" required={true} />
+                <TextInput label="Phone Number" ref={phoneNumber} type="tel" pattern="\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}" placeholder="(123) 456-7890" />
 
-                <TextInput label="Institution" ref={institution} showLabel={true} placeholder="ex: University of Maryland, College Park" required={false} />
-                {/*
+                <TextInput label="Email" ref={email} type="email" placeholder="john.doe@umd.edu" />
+
                 <SelectButton label="Institution" ref={institution} options={[
                     { label: 'Select Institution', value: '' },
                     ...schoolNames.map((school) => ({ label: school, value: school })),
                 ]} />
-                */}
 
-                <div className={styles.formGroup}>
-                    <label htmlFor="role" className="form-label">Role</label>
-                    <SelectButton id="role" ref={role} required={true} options={[
-                        { label: 'Select Option', value: '' },
-                        { label: 'High School Student', value: 'hsStudent' },
-                        { label: 'Undergraduate Student', value: 'undergraduateStudent' },
-                        { label: 'Graduate Student', value: 'graduateStudent' },
-                        { label: 'Professional', value: 'professional' },
-                        { label: 'Professor', value: 'professor' },
-                        { label: 'Other', value: 'other' }
-                    ]} />
-                </div>
+                <SelectButton label="Role" ref={role} options={[
+                    { label: 'Select Role', value: '' },
+                    { label: 'High School Student', value: 'hsStudent' },
+                    { label: 'Undergraduate Student', value: 'undergraduateStudent' },
+                    { label: 'Graduate Student', value: 'graduateStudent' },
+                    { label: 'Professional', value: 'professional' },
+                    { label: 'Professor', value: 'professor' },
+                    { label: 'Other', value: 'other' },
+                ]} onChange={() => { setShowOtherRoleInput(role.current.value === 'other'); }} />
 
-                <TextInput label="Please specify if you selected 'Other'" ref={otherRole} showLabel={true} required={false} />
+                {showOtherRoleInput && <TextInput label="Please specify your role..." ref={roleOther} showLabel={false} placeholder="e.g. Artist, Researcher, etc." />}
 
-                {userType === 'explorer' && (
-                    <>
-                        <TextInput label="Major" ref={major} showLabel={true} placeholder="ex: Physics" required={false} />
-
-                        {/* show label does not work for drop down menus, yet */}
-                        <div className={styles.formGroup}>
-                            <label htmlFor="attendance" classname="form-label">Would you be attending in person or virtually?</label>
-                            <SelectButton id="attendance" ref={attendance} required={true} options={[
-                                { label: 'Select Option', value: '' },
-                                { label: 'In Person*', value: 'inPerson' },
-                                { label: 'Virtual', value: 'virtual' }
-                            ]} />
-                        </div>
-
-                        <small style={{ fontSize: '13px' }}>
-                            *Note: Due to capacity restraints, we are only accepting 100 in-person attendees. 
-                            Choosing in-person attendance does not guarantee acceptance. 
-                            We will notify you if you have been selected to attend in-person.
-                        </small>
-                    </>
-                )}
+                {userType === 'explorer' &&
+                    <TextInput label="Major" ref={major} placeholder="e.g. Computer Science, Physics, etc." />}
 
                 <hr style={{ margin: '20px 0' }} />
 
-                {/* keep numbers as placeholders for now, will figure out later */}
-                <div className={styles.formGroup}>
-                    <label htmlFor="where-heard" classname="form-label">Where did you hear about this event?</label>
-                    <SelectButton id="where-heard" ref={whereHeard} required={false} options={[
-                        { label: 'Select Option', value: '' },
-                        { label: 'Instagram', value: 'instagram' },
-                        { label: 'Linkedin', value: 'linkedin' },
-                        { label: 'University/School Club', value: 'club' },
-                        { label: 'Word of mouth (e.g. friend, colleague)', value: 'wordOfMouth' },
-                        { label: 'Google Search', value: 'google' },
-                        { label: 'Flyer', value: 'flyer' },
-                        { label: 'Other', value: 'other'}
-                    ]} />
-                </div>
+                <SelectButton label="How did you hear about us?" ref={howHeard} labelType="prompt" options={[
+                    { label: 'Select Option', value: '' },
+                    { label: 'Social Media', value: 'socialMedia' },
+                    { label: 'Friend/Colleague', value: 'friend' },
+                    { label: 'Email Newsletter', value: 'emailNewsletter' },
+                    { label: 'Website', value: 'website' },
+                    { label: 'Other', value: 'other' },
+                ]} onChange={() => { setShowOtherHowHeardInput(howHeard.current.value === 'other'); }} />
+                {showOtherHowHeardInput && <TextInput label="Please specify how you heard about us..." showLabel={false} ref={howHeardOther} labelType="title" />}
 
-                <TextInput label="Please specify if you selected 'Other'" ref={otherWhereHeard} showLabel={true} required={false} />
+                <hr style={{ margin: '20px 0' }} />
 
                 {userType === 'volunteer' && (
                     <>
-                        <div className={styles.formGroup}>
-                            <label classname="form-label">Where would you like to volunteer?</label>
-                            <div className="checkbox-group"> {[
-                                { label: '  Registration', value: 'registration' },
-                                { label: '  Set Up', value: 'setup' },
-                                { label: '  Virtual Moderator', value: 'virtualModerator' },
-                                { label: '  Exhibitions', value: 'exhibitions' },
-                                { label: '  Workshops', value: 'workshops' }
-                            ].map((option) => (
-                                <div key={option.value} className="checkbox-option">
-                                    <input
-                                        type="checkbox"
-                                        id={option.value}
-                                        value={option.value}
-                                        onChange={handleCheckboxChange}
-                                        checked={selectedLocations.includes(option.value)}
-                                    />
-                                    <label htmlFor={option.value}>{option.label}</label>
-                                </div>
-                            ))}
-                            </div>
-                            {locationError && (
-                                /* error of not selecting any options is being tracked but not shown to user*/
-                                <p style={{ color: 'red', fontSize: '0.9rem', marginTop: '0.5rem' }}>{locationError}
-                                </p>
-                            )}
+                        <CheckboxSelector label="What is your availability for the event?" ref={availability} options={[
+                            { label: 'Friday Night', value: 'friday' },
+                            { label: 'Saturday', value: 'saturday' },
+                            { label: 'Sunday*', value: 'sunday' },
+                        ]} />
+
+                        <div>
+                            <p style={{ fontSize: 'small' }}>
+                                *Q^3 is tentatively scheduled for Sunday and may be subject to change. We'll provide updates as soon as they are available.
+                            </p>
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label classname="form-label">What is your availability for the event?</label>
-                            <div className="checkbox-group"> {[
-                                { label: '  Friday', value: 'friday' },
-                                { label: '  Saturday', value: 'saturday' },
-                                { label: '  Sunday*', value: 'sunday' },
-                            ].map((option) => (
-                                <div key={option.value} className="checkbox-option">
-                                    <input
-                                        type="checkbox"
-                                        id={option.value}
-                                        value={option.value}
-                                        onChange={handleCheckboxChange}
-                                        checked={selectedLocations.includes(option.value)}
-                                    />
-                                    <label htmlFor={option.value}>{option.label}</label>
-                                </div>
-                            ))}
-                            </div>
-                            {locationError && (
-                                <p style={{ color: 'red', fontSize: '0.9rem'}}>{locationError}</p>
-                            )}
-                        </div>
-
-                        <div className={styles.formGroup}>
-                            <label classname="form-label">What shifts are you able to volunteer?</label>
-                            <div className="checkbox-group"> {[
-                                { label: '  4:00 - 6:00 pm (Friday)', value: 'friday4to6'},
-                                { label: '  9:00 - 11:00 am (Saturday)', value: 'saturday9to11' },
-                                { label: '  11:00 am - 1:00 pm (Saturday)', value: 'saturday11to1' },
-                                { label: '  1:00 - 3:00 pm (Saturday)', value: 'saturday1to3' },
-                                { label: '  4:00 - 7:00 pm (Saturday)', value: 'saturday4to7' }
-                            ].map((option) => (
-                                <div key={option.value} className="checkbox-option">
-                                    <input
-                                        type="checkbox"
-                                        id={option.value}
-                                        value={option.value}
-                                        onChange={handleCheckboxChange}
-                                        checked={selectedLocations.includes(option.value)}
-                                    />
-                                    <label htmlFor={option.value}>{option.label}</label>
-                                </div>
-                            ))}
-                            </div>
-                            {locationError && (
-                                <p style={{ color: 'red', fontSize: '0.9rem'}}>{locationError}</p>
-                            )}
-                        </div>
-
-                        <small style={{ fontSize: '13px' }}>
-                            *Note: Q^3 is tentatively scheduled for Sunday and may be subject to change. 
-                            We'll provide updates as soon as they are available.
-                        </small>
-
+                        <CheckboxSelector label="I am available for the following shifts..." ref={shifts} options={[
+                            { label: '4:00–6:00 PM (Friday)', value: '16-18-fri' },
+                            { label: '9:00–11:00 AM (Saturday)', value: '09-11-sat' },
+                            { label: '11:00 AM–1:00 PM (Saturday)', value: '11-13-sat' },
+                            { label: '1:00–3:00 PM (Saturday)', value: '13-15-sat' },
+                            { label: '3:00–7:00 PM (Saturday)', value: '15-19-sat' },
+                        ]} />
+                        <CheckboxSelector label="Where would you like to volunteer?" ref={location} options={[
+                            { label: 'Registration', value: 'registration' },
+                            { label: 'Set Up', value: 'setup' },
+                            { label: 'Virtual Moderator', value: 'virtualModerator' },
+                            { label: 'Exhibitions', value: 'exhibitions' },
+                            { label: 'Workshops', value: 'workshops' },
+                        ]} />
                     </>
                 )}
 
-                {/* These are general questions for attendees that can be changed anytime */}
                 {userType === 'explorer' && (
                     <>
-                        <br />
-                        <TextInput label="Why quantum and art?" ref={whyQuantumArt} showLabel={true} required={false} />
-                        <br />
+                        <SelectButton ref={attendance} options={[
+                            { label: 'Select Option', value: '' },
+                            { label: 'In-Person*', value: 'inPerson' },
+                            { label: 'Virtually', value: 'virtual' },
+                        ]} showLabel={true} label="I would like to attend..." labelType="prompt" />
 
-                        <p>What's your favorite...</p>
+                        <div>
+                            <p style={{ fontSize: 'small' }}>
+                                *Due to capacity constraints, we are only accepting 100 in-person applicants. Choosing in-person attendance does not guarantee acceptance. We will notify you if you have been selected to attend in-person.
+                            </p>
+                        </div>
 
-                        <TextInput label="Song" ref={favoriteSong} />
-                        <TextInput label="Movie" ref={favoriteMovie} />
-                        <TextInput label="Game" ref={favoriteGame} />
-                        <TextInput label="Book" ref={favoriteBook} />
+                        <hr style={{ margin: '20px 0' }} />
 
-                        <br />
-                        <TextInput label="If you were to write a book, what would it be about?" ref={bookPrompt} showLabel={true} 
-                        required={false} />
-                        <br />
-                        <TextInput label="Suppose you were to merge quantum and music. What would you create?" ref={artPrompt} 
-                        showLabel={true} required={false} />
-                        <br />
-                        <TextInput label="When you think of quantum research, what's the first thing that comes to mind?" 
-                        ref={researchPrompt} showLabel={true} required={false} />
-                        <br />
-                        <TextInput label="What do you look forward to at Q^3?" ref={q3Prompt} showLabel={true} required={false} />
+                        <TextInput label="Why quantum and art?" ref={why} showLabel={true} labelType="prompt" placeholder="I am interested in quantum because..." />
+
+                        <TextInput label="My favorite song is..." ref={favoriteSong} showLabel={true} labelType="prompt" placeholder="e.g. Bohemian Rhapsody" />
+
+                        <TextInput label="My favorite movie is..." ref={favoriteMovie} showLabel={true} labelType="prompt" placeholder="e.g. Inception" />
+
+                        <TextInput label="My favorite museum is..." ref={favoriteMuseum} showLabel={true} labelType="prompt" placeholder="e.g. The Louvre" />
+
+                        {/* <TextInput label="A musician approaches you and asks you for a crazy idea on combining quantum and music. What would you say?" ref={artPrompt} showLabel={true} placeholder="A quantum keyboard..." labelType="prompt" />
+                        <TextInput label="What if the musician said he wanted to use that idea to brainwash the world. What will you do to stop him?" ref={ethicsPrompt} showLabel={true} placeholder="You mustn't..." labelType="prompt" /> */}
+
+                        <TextInput label="If you were to write a book, what would it be about?" ref={bookPrompt} showLabel={true} labelType="prompt" placeholder="My pet dog..." />
+                        <TextInput label="Suppose you were to merge quantum and music. What would you create?" ref={mergePrompt} showLabel={true} labelType="prompt" placeholder="A quantum keyboard..." />
+                        <TextInput label="When you think of quantum research, what's the first thing that comes to mind?" ref={researchPrompt} showLabel={true} labelType="prompt" placeholder="Quantum computers..." />
+                        <TextInput label="What do you look forward to at Q^3?" ref={q3Prompt} showLabel={true} labelType="prompt" placeholder="Lots of fun..." />
                     </>
                 )}
 
                 <hr style={{ margin: '20px 0' }} />
 
-                <h4>Emergency Contact Information</h4>
-
-                <div className={styles.formGroup}>
-                    <label htmlFor="name" className="form-label">Name</label>
-                    <div className={styles.formRow}>
-                        <TextInput id="emergFirstName" label="First Name" ref={emergFirstName} required={true} style={{ flex: 1 }} />
-                        <TextInput id="emergLastName" label="Last Name" ref={emergLastName} required={true} style={{ flex: 1 }} />
-                    </div>
+                <h2 style={{ fontSize: 'medium', textAlign: 'center' }}>Emergency Contact Information</h2>
+                <div className={styles.formRow}>
+                    <TextInput label="First Name" ref={emergencyContactFirstName} placeholder="Jane" />
+                    <TextInput label="Last Name" ref={emergencyContactLastName} placeholder="Doe" />
                 </div>
-
-                <TextInput label="Relation" ref={emergRelation} showLabel={true} placeholder="ex: Father" required={true} />
-                <TextInput label="Email" ref={emergEmail} showLabel={true} type="email" placeholder="ex: myname@example.com" required={true} />
-                <TextInput label="Phone Number" ref={emergNumber} showLabel={true} placeholder="(000) 000-000" required={true} />
-
-                {/* Implement Terms and Conditions text and option box (box can be multiple choice) */}
+                <TextInput label="Phone Number" ref={emergencyContactPhoneNumber} type="tel" pattern="\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}" placeholder="(123) 456-7890" />
+                <TextInput label="Email" ref={emergencyContactEmail} type="email" placeholder="jane.doe@umd.edu" />
+                <TextInput label="Relationship" ref={emergencyContactRelationship} placeholder="e.g. Parent, Guardian, etc." />
 
                 <br />
 

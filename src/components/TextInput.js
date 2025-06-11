@@ -1,4 +1,4 @@
-function TextInput({ label, ref, required, showLabel, placeholder, type }) {
+function TextInput({ labelType, label, ref, required, showLabel = true, placeholder, type, pattern }) {
     const inputStyle = {
         width: '100%',
         padding: '10px',
@@ -7,10 +7,29 @@ function TextInput({ label, ref, required, showLabel, placeholder, type }) {
         outline: 'none',
     };
 
+    const labelStyles = {
+        prompt: {
+            marginBottom: '8px',
+            display: 'block',
+            fontWeight: 'normal',
+            fontSize: 'medium',
+            marginTop: '2px',
+        },
+        title: {
+            marginBottom: '10px',
+            fontWeight: 'normal',
+            fontSize: 'small',
+        },
+    };
+
     return (
         <div>
-            {showLabel && <label style={{ marginBottom: '10px', display: 'block', fontWeight: 'normal' }}>{label}</label >}
-            <input type={type ?? 'text'} ref={ref} placeholder={showLabel ? placeholder : label} style={inputStyle} name={label} required={required ?? true} />
+            {showLabel && (
+                <label style={labelStyles[labelType] || labelStyles.title}>
+                    {label}
+                </label>
+            )}
+            <input type={type ?? 'text'} ref={ref} placeholder={showLabel ? placeholder : label} style={inputStyle} name={label} required={required ?? true} pattern={pattern} />
         </div>
     );
 }
