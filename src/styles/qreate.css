@@ -118,7 +118,7 @@ html, body {
     position: relative;
     padding: 2rem 1rem 4rem;            
     background-color: white;
-    min-width: 400px;
+    min-width: 200px;
   }
 
 
@@ -151,9 +151,10 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 6rem;
-    padding: 2rem 4rem 0rem;
+    padding: 2rem 2rem 0rem;
     max-width: 1000px;
     margin: 2.5rem auto 0;
+    justify-items: center;
   }
 
 

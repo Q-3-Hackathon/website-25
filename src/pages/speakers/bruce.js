@@ -30,7 +30,10 @@ function Bruce() {
     </div>  
     </div>
     <div className="speaker-content">
-      <p className="p">Bio
+      <p className="p">Bruce Rosenbaum has been dubbed the Steampunk Guru by the Wall Street Journal and Steampunk Evangelist by Wired Magazine. Bruce's functional Steampunk artwork has been featured in the Boston Globe, The Chicago Tribune, The New York Times, Architectural Digest, CNN, NPR and featured on MTV, A&E, HGTV and Netflix.
+Bruce's company, ModVic, works with clients all across the world to take period, repurposed, personal and meaningful objects, and creatively infuse them with modern technology to transform the ordinary into incredible Steampunk functional placemaking art. The Steampunk art and design process celebrates history, while setting a path for a reimagined better future -- telling the personal stories of objects, individuals, buildings, organizations and places.
+
+Bruce's Steampunkinetics workshops also builds art and history into science helping to promote STEAM (Science, Technology, Engineering, ART and Math) and creative problem solving skills for atypical and neurotypical children and adults.
       </p>
     </div>
     </>
