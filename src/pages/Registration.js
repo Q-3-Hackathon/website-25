@@ -1,4 +1,3 @@
-import infoSym from '../assets/images/regInfoSymbol.png'
 import '../styles/Registration.css';
 
 function Registration() {
