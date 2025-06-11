@@ -37,7 +37,6 @@ function Navbar() {
               <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
               <Link to="/qreate" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qreate</Link>
               <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qethics</Link>
-              <Link to="/schedule" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Schedule</Link>
               </div>
             </div>
             <Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link>
@@ -46,6 +45,7 @@ function Navbar() {
           </div>
           <div className = 'content'> 
           <Routes>
+              <Route path="/schedule" element={<Schedule />} />
               <Route path="/" element={<Home />} />
               <Route path="/qreate" element={<Qreate />} />
               <Route path="/qethics" element={<Qethics />} />
