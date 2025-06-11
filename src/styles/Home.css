@@ -48,6 +48,7 @@
   box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.25);
   justify-content: center;
   text-align:center;
+  background-color: #f8f9fa;
 }
 
 .pillar:hover {
@@ -78,7 +79,6 @@
 
   .page-title {
     display: inline-block;               
-    margin: 2rem 0rem 0rem;                   
     text-align: left;                  
     font-family: 'Poppins', sans-serif;
     font-size: clamp(5rem, 10vw, 7rem);
@@ -93,8 +93,7 @@
     overflow-wrap: normal;
     word-break: normal;
     white-space: normal;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 70px 0px 45px 0px;
   }
 .slider-frame {
   overflow: hidden;

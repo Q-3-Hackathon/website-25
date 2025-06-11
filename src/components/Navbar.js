@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Faq from '../pages/Faq';
 import Qreate from '../pages/Qreate';
 import Qethics from '../pages/Qethics';
-import Resources from '../pages/Resources';
+//import Resources from '../pages/Resources';
 import Schedule from '../pages/Schedule';
 import Registration from '../pages/Registration';
 import Home from '../pages/Home';
