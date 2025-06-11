@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState} from 'react';
 import { FIRESTORE_DB } from '../../firebase/FirebaseConfig';
 import SelectButton from '../../components/SelectButton';
 import TextInput from '../../components/TextInput';
@@ -13,6 +13,7 @@ function SignUp() {
     const lastName = useRef('');
     const phoneNumber = useRef('');
     const email = useRef('');
+    const phoneNum = useRef('');
     const institution = useRef('');
     const role = useRef('');
     const roleOther = useRef('');
@@ -27,7 +28,7 @@ function SignUp() {
     // explorer
     const major = useRef('');
     const attendance = useRef('');
-    const why = useRef('');
+    const whyQuantumArt = useRef('');
     const favoriteSong = useRef('');
     const favoriteMovie = useRef('');
     const favoriteMuseum = useRef('');
@@ -63,6 +64,11 @@ function SignUp() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        if (selectedLocations.length === 0) {
+            setLocationError('Please select at least one option')
+            return;
+        }
+
         if (!canSubmit.current)
             return;
         canSubmit.current = false;
@@ -72,6 +78,7 @@ function SignUp() {
             lastName: lastName.current.value,
             phoneNumber: phoneNumber.current.value.replace(/[^0-9]/g, ''),
             email: email.current.value,
+            phoneNum: phoneNum.current.value,
             institution: institution.current.value,
             role: showOtherRoleInput ? roleOther.current.value : role.current.value,
             howHeard: showOtherHowHeardInput ? howHeardOther.current.value : howHeard.current.value,
@@ -89,7 +96,7 @@ function SignUp() {
         } else if (userType === 'explorer') {
             data.major = major.current.value;
             data.attendance = attendance.current.value;
-            data.why = why.current.value;
+            data.whyQuantumArt = whyQuantumArt.current.value;
             data.favoriteSong = favoriteSong.current.value;
             data.favoriteMovie = favoriteMovie.current.value;
             data.favoriteMuseum = favoriteMuseum.current.value;

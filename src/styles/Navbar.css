@@ -11,8 +11,9 @@
     justify-content: space-between;
     box-sizing: border-box;
     color: #3081c4;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
-
 
 a:link, a:visited, a:active {
     color: #3081c4;
@@ -32,14 +33,47 @@ a:link, a:visited, a:active {
 }
 
 .dropdown-content a {
-    padding: 12px 16px;
+    padding: 12px 10px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content {
     margin-top: 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    align-items: left;
     display: none;
     position: absolute;
+    left: -10px;
+}
+
+@media (max-width: 700px) {
+  .Navbar {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    max-height: none;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .Navbar > * {
+    min-width: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-basis: 33%; /* 3 items per row max */
+  }
+  .Navbar > *:nth-child(n+4) {
+    flex-basis: 50%; /* 2 items on second row if more than 3 */
+  }
+  .Navbar > *:nth-child(3n) {
+    text-align: right;
+  }
+  .Navbar > *:nth-child(4) {
+    text-align: left;
+  }
+  .Navbar > *:nth-child(5) {
+    text-align: right;
+  }
 }
