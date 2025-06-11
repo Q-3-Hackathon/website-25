@@ -39,7 +39,7 @@ function Navbar() {
               <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qethics</Link>
               </div>
             </div>
-            <Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link>
+            {/*<Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link> */}
             {/* <Link to="/resources" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Resources</Link> */}
             <Link to="/faq" onClick={closeDropdown} style={{ textDecoration: 'none'}}>FAQ</Link>
           </div>
@@ -50,7 +50,6 @@ function Navbar() {
               <Route path="/qreate" element={<Qreate />} />
               <Route path="/qethics" element={<Qethics />} />
               {/* <Route path="/resources" element={<Resources />} /> */}
-              <Route path="/schedule" element={<Schedule />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/QEE" element={<QEE/>}/>
