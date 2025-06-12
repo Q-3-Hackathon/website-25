@@ -37,8 +37,8 @@ function Navbar() {
             <div className = 'dropdown'>
               <span onClick={toggleDropdown}>About ▾</span>
               <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              <Link to="/qreate" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qreate</Link>
-              <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qethics</Link>
+              <Link to="/qreate" onClick={closeDropdown} style={{ textDecoration: 'none'}}>QREATE</Link>
+              <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>QOMPUTE</Link>
               </div>
             </div>
             {/*<Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link> */}

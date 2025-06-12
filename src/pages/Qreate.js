@@ -234,7 +234,7 @@ function Qreate() {
         <div className="divider" />
         <div className="schedule-right">
           <h2 className="schedule-title">SCHEDULE</h2>
-          <Link to="/Schedule" className="btn">→</Link>
+          {/*<Link to="/Schedule" className="btn">→</Link>*/}
         </div>
       </div>
     </section>

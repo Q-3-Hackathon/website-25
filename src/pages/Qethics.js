@@ -96,8 +96,8 @@ function Qethics() {
           <div className="divider" />
           <div className="schedule-right">
             <h2 className="schedule-title">SCHEDULE</h2>
-            <p style={{ padding: '0px 0px 15px' }}>Event / Time <br /> FRIDAY & SATURDAY</p>
-            <Link to="/Schedule" className="btn">→</Link>
+            <p style={{ padding: '0px 0px 15px' }}>Event / Time <br /> FRIDAY & SUNDAY</p>
+            {/*<Link to="/Schedule" className="btn">→</Link>*/}
           </div>
         </div>
       </section>
