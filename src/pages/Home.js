@@ -96,7 +96,7 @@ function Home() {
             <div className = 'sponsors'>
               <h1 style={{fontSize: '4rem', padding: '0rem 0rem 1rem', color: '#2079AF'}}>Partners</h1>
               <p>
-              Q<sup>3</sup> would not have been possible without our generous sponsors and partners!
+              Q<sup>3</sup> would not have been possible without our generous partners!
               </p>
                 <section className="sponsors-slider">
                   <div className="slider-frame">
