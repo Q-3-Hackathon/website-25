@@ -44,7 +44,7 @@ function Halpern() {
         public Quantum Steampunk: The Physics of Yesterday’s Tomorrow, which won the PROSE Award 
         for Popular Science and Mathematics.
       </p>
-      <a href="https://quantumsteampunk.umiacs.io/" target="_blank" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      <a href="https://quantumsteampunk.umiacs.io/" target="_blank" rel="noreferrer" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
       The Quantum Steampunk Laboratory </a> 
     </div>
     </>
