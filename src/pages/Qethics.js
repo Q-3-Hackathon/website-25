@@ -16,7 +16,7 @@ function Qethics() {
           <div className="left">
             <h1 className="title">
               <span>Q<sup>3</sup> Initiative:</span><br />
-              <span>QETHICS @ USC</span>
+              <span>QOMPUTE @ USC</span>
             </h1>
             <p className="paragraph">
               Q<sup>3</sup> is a joint quantum initiative between the University of Maryland, College Park

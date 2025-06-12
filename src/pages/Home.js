@@ -90,7 +90,7 @@ function Home() {
             </Link>
             <Link to="/QEthics" className="pillar">
               <h2 style={{fontSize: '3rem', padding: '0rem 0rem 1rem', color: '#2079AF'}}>USC</h2>
-              <p>A traditional, 24-hour technical quantum hackathon with an introduction to responsible quantum engineering and real world applications.</p>
+              <p>A traditional, 24-hour technical quantum hackathon and gather insight on real world applications of quantum engineering.</p>
             </Link>
             <div className = 'sponsors'>
               <h1 style={{fontSize: '4rem', padding: '0rem 0rem 1rem', color: '#2079AF'}}>Partners</h1>
