@@ -18,6 +18,8 @@ import Pundyk from '../pages/speakers/katepundyk';
 import Spedalieri from '../pages/speakers/spedalieri';
 import Rosa from '../pages/speakers/rosadifelice';
 import Bruce from '../pages/speakers/bruce';
+import Halpern from '../pages/speakers/nicoleyungerhalpern';
+
 
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -62,6 +64,7 @@ function Navbar() {
               <Route path="/spedalieri" element={<Spedalieri />} />
               <Route path="/rosa" element={<Rosa />} />
               <Route path="/bruce" element={<Bruce />} />
+              <Route path="/halpern" element={<Halpern />} />
           </Routes>
           </div>
       </Router>
