@@ -41,7 +41,7 @@ function Qethics() {
           <h2 className="umd-heading">Q<sup>3</sup> @ USC</h2>
           <p className='paragraph' style={{ color: 'white', textAlign: 'left' }}>
             At USC, Q<sup>3</sup> will focus on two pillars: ethics and engineering. With the help of sponsors, we aim to provide quantum workshops,
-            lectures and panels about ethics and physics. Students will also be given the oppurtunity to network with scientists
+            lectures and panels about ethics and physics. Students will also be given the opportunity to network with scientists
             leading the quantum revolution. Our goal is to provide learning and networking
             opportunities and teach engineers more about the economics and policy of emerging
             quantum technologies.
