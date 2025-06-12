@@ -94,7 +94,7 @@ function Home() {
               <p>A traditional, 24-hour technical quantum hackathon with an introduction to responsible quantum engineering and real world applications.</p>
             </Link>
             <div className = 'sponsors'>
-              <h1 style={{fontSize: '4rem', padding: '0rem 0rem 1rem', color: '#2079AF'}}>Sponsors</h1>
+              <h1 style={{fontSize: '4rem', padding: '0rem 0rem 1rem', color: '#2079AF'}}>Partners</h1>
               <p>
               Q<sup>3</sup> would not have been possible without our generous sponsors and partners!
               </p>
