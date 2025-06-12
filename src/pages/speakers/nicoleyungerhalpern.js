@@ -1,7 +1,8 @@
 import '../../styles/speaker.css';
 import logo from '../../assets/images/Q3logotext.png';
 import halpern from "../../assets/images/speakers/nicolehalpern.png";
-function halpern() {
+
+function Halpern() {
     return (
     <>
     <div class="header">
@@ -48,5 +49,4 @@ function halpern() {
     </>
     );
 }
-
-export default halpern();
+export default Halpern();
