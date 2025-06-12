@@ -37,6 +37,10 @@ function Benally() {
             Quantum Hardware Engineer during his internship with the Quantum Hardware Design & Simulation Group at the IBM T.J. Watson Research 
             Center, Yorktown Heights, NY
       </p>
+      <a href="https://www.linkedin.com/in/onri-jay-benally-a33816125/" target="_blank" rel="noreferrer" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      Linkedin </a>
+      <a href="https://ojb-quantum.github.io/OJB-Quantum/" target="_blank" rel="noreferrer" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      Github </a> 
     </div>
     </>
     );
