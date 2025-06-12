@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Faq from '../pages/Faq';
 import Qreate from '../pages/Qreate';
 import Qethics from '../pages/Qethics';
-import Resources from '../pages/Resources';
+//import Resources from '../pages/Resources';
 import Schedule from '../pages/Schedule';
 import Registration from '../pages/Registration';
 import Home from '../pages/Home';
@@ -37,20 +37,19 @@ function Navbar() {
               <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
               <Link to="/qreate" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qreate</Link>
               <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Qethics</Link>
-              <Link to="/schedule" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Schedule</Link>
               </div>
             </div>
-            <Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link>
-            <Link to="/resources" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Resources</Link>
+            {/*<Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link> */}
+            {/* <Link to="/resources" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Resources</Link> */}
             <Link to="/faq" onClick={closeDropdown} style={{ textDecoration: 'none'}}>FAQ</Link>
           </div>
           <div className = 'content'> 
           <Routes>
+              <Route path="/schedule" element={<Schedule />} />
               <Route path="/" element={<Home />} />
               <Route path="/qreate" element={<Qreate />} />
               <Route path="/qethics" element={<Qethics />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/schedule" element={<Schedule />} />
+              {/* <Route path="/resources" element={<Resources />} /> */}
               <Route path="/registration" element={<Registration />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/QEE" element={<QEE/>}/>

@@ -76,7 +76,7 @@ function Home() {
         </head>
         <div className='home-content'>
           <h1 className='page-title'>Q<sup>3</sup> Initiative</h1>
-          <p style={{fontSize: '2rem', padding: '0rem 1rem 2rem', color: '#2079AF', textShadow: '2px 2px 2px rgba(0, 0, 0, 0.4)'}}>September 12 - 14, 2025</p>
+          <p style={{fontSize: '2rem', padding: '0rem 1rem 2rem', color: '#2079AF'}}>September 12 - 14, 2025</p>
           <h2 style={{fontSize: '3.5rem', padding: '1rem 0rem 1rem', color: '#2079AF'}}>About Q<sup>3</sup></h2>
           <p>A joint Center for Quantum Networks and United Nations International Telecommunications Union quantum initiative dedicated to three pillars: 
             art, ethics, and engineering. With two host institutions, the University of Maryland and the University of California, this quantum initiative 
