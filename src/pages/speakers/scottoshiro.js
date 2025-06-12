@@ -38,6 +38,8 @@ function Oshiro() {
         Asian Improv aRts fellow, developing quantum computer music improvisation systems for an album featuring BIPOC artists, 
         showcasing the connection between music and quantum physics.
       </p>
+      <a href="https://scottoshiro.squarespace.com/" target="_blank" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      Scott Oshiro Music </a> 
     </div>
     </>
   );

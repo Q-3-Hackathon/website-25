@@ -27,11 +27,10 @@ function Halpern() {
       <div className="speaker-content">
       <h1>Nicole Yunger Halpern</h1>
       <h2>Physicist & Author of Quantum Steampunk</h2>
-
     </div>  
     </div>
     <div className="speaker-content">
-      <p className="p">ONicole Yunger Halpern is a physicist at the National Institute of Standards 
+      <p className="p">Nicole Yunger Halpern is a physicist at the National Institute of Standards 
         and Technology (NIST), a Fellow of the Joint Center for Quantum Information and Computer 
         Science (QuICS), and an adjunct assistant professor at the University of Maryland. Nicole 
         re-envisions 19th-century thermodynamics for the 21st century, using quantum information 
@@ -45,8 +44,10 @@ function Halpern() {
         public Quantum Steampunk: The Physics of Yesterday’s Tomorrow, which won the PROSE Award 
         for Popular Science and Mathematics.
       </p>
+      <a href="https://quantumsteampunk.umiacs.io/" target="_blank" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      The Quantum Steampunk Laboratory </a> 
     </div>
     </>
     );
 }
-export default Halpern();
+export default Halpern;

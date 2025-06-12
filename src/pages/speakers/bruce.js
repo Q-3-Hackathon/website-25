@@ -35,6 +35,8 @@ Bruce's company, ModVic, works with clients all across the world to take period,
 
 Bruce's Steampunkinetics workshops also builds art and history into science helping to promote STEAM (Science, Technology, Engineering, ART and Math) and creative problem solving skills for atypical and neurotypical children and adults.
       </p>
+      <a href="http://modvic.com/" target="_blank" className="btn" style={{margin: "2rem auto", fontWeight: 400, fontSize: '20px', borderRadius: '0px'}} >
+      Modvic </a> 
     </div>
     </>
   );
