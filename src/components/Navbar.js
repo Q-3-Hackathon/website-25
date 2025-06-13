@@ -41,7 +41,7 @@ function Navbar() {
               <Link to="/qethics" onClick={closeDropdown} style={{ textDecoration: 'none'}}>QOMPUTE</Link>
               </div>
             </div>
-            {/*<Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link> */}
+            <Link to="/registration" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Registration</Link>
             {/* <Link to="/resources" onClick={closeDropdown} style={{ textDecoration: 'none'}}>Resources</Link> */}
             <Link to="/faq" onClick={closeDropdown} style={{ textDecoration: 'none'}}>FAQ</Link>
           </div>

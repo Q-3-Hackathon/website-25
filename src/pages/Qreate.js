@@ -246,7 +246,7 @@ function Qreate() {
           <span>Q<sup>3</sup> @ USC</span>
           </h1>
           <p className="paragraph">
-            Engage in more technical quantum challenges from IBM Quantum with a focus in responsible engineering.
+            Engage in more technical quantum challenges from IBM Quantum.
           </p>
         </div>
         <div className="right" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 auto'}}>

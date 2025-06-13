@@ -84,7 +84,7 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
-  padding: 100px 0px;
+  padding: 40px 0px;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -136,3 +136,62 @@ button {
   color: #2079AF;
   background-color: #c7e9ff;
 }
+
+.reg-container {
+      display: flex;
+      justify-content: center;  
+      align-items: flex-start;  
+      gap: 2rem;                
+      padding: 2rem;            
+      margin: 5rem auto;
+}
+
+  .reg-card {
+      width: 500px;
+      height: 650px;
+      background-color: white;
+      border: 1px solid #2079AF;
+      border-radius: 3rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+      text-align: center;
+      transition: border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+  }
+    
+
+    @media (max-width: 650px) {
+      .reg-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .reg-card {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+  .reg-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(32, 120, 175, 0.321) 50%,
+    transparent 75%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.reg-card:hover::before {
+  transform: translateX(100%);
+}
+
+  
+
