@@ -1,5 +1,4 @@
 import '../styles/Registration.css';
-import { Link } from 'react-router-dom';
 
 function Registration() {
   return (
